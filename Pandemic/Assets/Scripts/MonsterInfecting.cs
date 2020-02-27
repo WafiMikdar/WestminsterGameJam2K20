@@ -2,9 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Experience))]
 public class MonsterInfecting : MonoBehaviour
 {
     [SerializeField] private float infectionRange;
+
+    private Experience experience;
+
+    private void Awake()
+    {
+        experience = GetComponent<Experience>();
+    }
 
     private void Update()
     {
@@ -20,7 +28,7 @@ public class MonsterInfecting : MonoBehaviour
 
         foreach (Collider2D hit in hits)
         {
-            hit.GetComponent<IInfectable>()?.Infect();
+            hit.GetComponent<IInfectable>()?.Infect(experience);
         }
     }
 }

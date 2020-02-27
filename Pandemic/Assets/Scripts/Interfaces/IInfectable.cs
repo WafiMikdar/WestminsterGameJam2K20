@@ -9,7 +9,7 @@
 
 public interface IInfectable
 {
-    void Infect();
+    void Infect(Experience source);
 
-    void Cure();
+    void Cure(Experience source);
 }

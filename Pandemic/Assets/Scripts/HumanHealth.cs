@@ -6,9 +6,13 @@ using UnityEngine;
 public class HumanHealth : MonoBehaviour, IInfectable
 {
     [SerializeField] private float infectionDuration, incubationDuration, curingDuration;
-    private float infectionProgress;
+    private float infectionProgress, incubationProgress;
+
+    [SerializeField] private double infectionXPGain, cureXPLoss, cureXPGain;
 
     private HealthBar healthBar;
+
+    private Experience experienceTarget;
 
     private InfectionStatus status = InfectionStatus.Healthy;
 
@@ -17,8 +21,10 @@ public class HumanHealth : MonoBehaviour, IInfectable
         healthBar = GetComponent<HealthBar>();
     }
 
-    public void Infect()
+    public void Infect(Experience source)
     {
+        experienceTarget = source;
+
         switch (status)
         {
             case InfectionStatus.Healthy:
@@ -26,6 +32,7 @@ public class HumanHealth : MonoBehaviour, IInfectable
                 break;
 
             case InfectionStatus.Curing:
+                experienceTarget.AwardXP(infectionXPGain);
                 StopAllCoroutines();
                 healthBar.StopDisplayingBar();
                 StartCoroutine(Infecting(infectionDuration));
@@ -48,7 +55,16 @@ public class HumanHealth : MonoBehaviour, IInfectable
     private IEnumerator Incubating(float duration)
     {
         status = InfectionStatus.Incubating;
-        yield return new WaitForSeconds(duration);
+        float startTime = Time.time, endTime = startTime + duration;
+
+        while (endTime > Time.time)
+        {
+            experienceTarget.AwardXP(((Time.time - startTime) - incubationProgress) / incubationDuration * infectionXPGain);
+            incubationProgress = Time.time - startTime;
+            yield return null;
+        }
+
+        experienceTarget.AwardXP((incubationDuration - incubationProgress) * infectionXPGain);
         StartCoroutine(Infecting(infectionDuration));
     }
 
@@ -60,21 +76,25 @@ public class HumanHealth : MonoBehaviour, IInfectable
         while (Time.time < endTime)
         {
             infectionProgress = Time.time - startTime;
-            Debug.Log($"Infection progress: {infectionProgress}");
+            //Debug.Log($"Infection progress: {infectionProgress}");
             yield return null;
         }
 
         Die();
     }
 
-    public void Cure()
+    public void Cure(Experience source)
     {
+        experienceTarget = source;
+
         switch (status)
         {
             case InfectionStatus.Incubating:
+                experienceTarget.AwardXP(incubationProgress / incubationDuration * -infectionXPGain);
                 StopAllCoroutines();
                 healthBar.StopDisplayingBar();
                 status = InfectionStatus.Healthy;
+                experienceTarget.AwardXP(cureXPGain);
                 break;
 
             case InfectionStatus.Infected:
@@ -85,10 +105,19 @@ public class HumanHealth : MonoBehaviour, IInfectable
         }
     }
 
-    private IEnumerator Curing(float delay)
+    private IEnumerator Curing(float duration)
     {
         status = InfectionStatus.Curing;
-        yield return new WaitForSeconds(delay);
+        float startTime = Time.time, endTime = startTime + duration, curingProgress = 0;
+
+        while (endTime > Time.time)
+        {
+            experienceTarget.AwardXP(((Time.time - startTime) - curingProgress) / curingDuration * -cureXPLoss);
+            curingProgress = Time.time - startTime;
+            yield return null;
+        }
+
+        experienceTarget.AwardXP(cureXPGain);
         status = InfectionStatus.Cured;
     }
 
