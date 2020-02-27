@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(RadialBarIndicator))]
 public class DoctorTrapPlacer : MonoBehaviour
 {
     [SerializeField] private float cooldown;
@@ -9,7 +10,7 @@ public class DoctorTrapPlacer : MonoBehaviour
 
     [SerializeField] private GameObject trap;
 
-    private void Update()
+    public void TryPlaceTrap()
     {
         if (CanPlaceTrap())
         {
@@ -19,13 +20,14 @@ public class DoctorTrapPlacer : MonoBehaviour
 
     private bool CanPlaceTrap()
     {
-        return Input.GetKeyDown(KeyCode.T) &&
-               Time.time >= availableTime;
+        return Time.time >= availableTime;
     }
 
     private void PlaceTrap()
     {
-        Instantiate(trap, transform.position, Quaternion.identity);
+        DoctorTrap newTrap = Instantiate(trap, transform.position, Quaternion.identity).GetComponent<DoctorTrap>();
+        newTrap.Setup(transform, GetComponent<RadialBarIndicator>());
+
         availableTime = Time.time + cooldown;
     }
 }

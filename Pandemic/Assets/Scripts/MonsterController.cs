@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class MonsterControls : MonoBehaviour
+public class MonsterController : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
     private Vector2 monsterVelocity;
+
+    [SerializeField] private MonsterInfecting infecting;
 
     public float Speed { get => speed; set => speed = value; }
 
@@ -23,7 +25,7 @@ public class MonsterControls : MonoBehaviour
 
     private void OnAttack()
     {
-        Debug.Log("Attacked");
+        infecting.TryInfect();
     }
 
     private void OnAbilityOne()

@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour
+public class DoctorController : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
     private Vector2 playerVelocity;
+
+    [SerializeField] private DoctorCuring curing;
+    [SerializeField] private DoctorTrapPlacer trapPlacer;
 
     public float Speed { get => speed; set => speed = value; }
 
@@ -23,12 +26,12 @@ public class PlayerController : MonoBehaviour
 
     private void OnAttack()
     {
-        Debug.Log("Attacked");
+        curing.TryCure();
     }
 
     private void OnAbilityOne()
     {
-        Debug.Log("Ability One");
+        trapPlacer.TryPlaceTrap();
     }
 
     private void OnAbilityTwo()

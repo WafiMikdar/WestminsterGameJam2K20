@@ -14,12 +14,17 @@ public class DoctorCuring : MonoBehaviour
         experience = GetComponent<Experience>();
     }
 
-    private void Update()
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.C))
+    //    {
+    //        Cure();
+    //    }
+    //}
+
+    public void TryCure()
     {
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            Cure();
-        }
+        Cure();
     }
 
     private void Cure()

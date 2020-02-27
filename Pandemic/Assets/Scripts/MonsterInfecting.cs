@@ -14,12 +14,17 @@ public class MonsterInfecting : MonoBehaviour
         experience = GetComponent<Experience>();
     }
 
-    private void Update()
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.I))
+    //    {
+    //        Infect();
+    //    }
+    //}
+
+    public void TryInfect()
     {
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            Infect();
-        }
+        Infect();
     }
 
     private void Infect()
