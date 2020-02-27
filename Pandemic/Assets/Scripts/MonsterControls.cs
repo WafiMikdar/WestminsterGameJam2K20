@@ -36,6 +36,21 @@ public class MonsterControls : MonoBehaviour
         Debug.Log("Ability Two");
     }
 
+    private void OnAbilityThree()
+    {
+        Debug.Log("Ability Three");
+    }
+
+    private void OnAbilityFour()
+    {
+        Debug.Log("Ability Four");
+    }
+
+    private void OnAbilityFive()
+    {
+        Debug.Log("Ability Five");
+    }
+
     private void FixedUpdate()
     {
         Move();

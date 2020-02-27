@@ -33,8 +33,25 @@ public class DoctorControls : MonoBehaviour
 
     private void OnAbilityTwo()
     {
-        Debug.Log("Ability Two");
+        Debug.Log("Ability One");
     }
+
+    private void OnAbilityThree()
+    {
+        Debug.Log("Ability Three");
+    }
+
+    private void OnAbilityFour()
+    {
+        Debug.Log("Ability Four");
+    }
+
+    private void OnAbilityFive()
+    {
+        Debug.Log("Ability Five");
+    }
+
+
 
     private void FixedUpdate()
     {
