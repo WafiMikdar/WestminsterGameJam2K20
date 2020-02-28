@@ -1,23 +1,43 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Pandemic/Assets/Sprites/SpiderWallHor.png.meta
-guid: 346fef05e530cd148bd365f6325e1c16
-=======
-guid: df7f09c781039374f9772131eec977e3
->>>>>>> assets:Pandemic/Assets/Sprites/rob-sprites/rob-idle.png.meta
+guid: db477f281d4e3b34d88d1514a43b731f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5869226014979853144
-    second: SpiderWallHor_0
+      213: 8298867245996667680
+    second: gig_move_0
   - first:
-      213: 6571100941014722258
-    second: SpiderWallHor_1
+      213: 1848250353876257474
+    second: gig_move_1
   - first:
-      213: -2639449703195520619
-    second: SpiderWallHor_2
+      213: -8079491298667746208
+    second: gig_move_2
   - first:
-      213: 5301274758143789911
-    second: SpiderWallHor_3
+      213: -2817535925654910513
+    second: gig_move_3
+  - first:
+      213: -1549132871619823067
+    second: gig_move_4
+  - first:
+      213: -5559986646913256070
+    second: gig_move_5
+  - first:
+      213: -9195880953158782157
+    second: gig_move_0
+  - first:
+      213: 5906950098257409238
+    second: gig_move_1
+  - first:
+      213: -7665261822127358610
+    second: gig_move_2
+  - first:
+      213: 87644980775974170
+    second: gig_move_3
+  - first:
+      213: 2630156128636737983
+    second: gig_move_4
+  - first:
+      213: -6505452711497677605
+    second: gig_move_5
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -61,7 +81,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -79,7 +99,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -91,7 +111,19 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -102,55 +134,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpiderWallHor_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8a4f4ae29025c8ea0800000000000000
-      internalID: -5869226014979853144
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpiderWallHor_1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2d6ea6c9d7d313b50800000000000000
-      internalID: 6571100941014722258
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpiderWallHor_2
+      name: gig_move_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 112
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +148,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5915586ba7ace5bd0800000000000000
-      internalID: -2639449703195520619
+      spriteID: 333b036befaa16080800000000000000
+      internalID: -9195880953158782157
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpiderWallHor_3
+      name: gig_move_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 112
         y: 0
-        width: 64
-        height: 64
+        width: 112
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,8 +169,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75bc7ef1e49e19940800000000000000
-      internalID: 5301274758143789911
+      spriteID: 6d4779861d3b9f150800000000000000
+      internalID: 5906950098257409238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gig_move_2
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 112
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6d3cbd2cf48f9590800000000000000
+      internalID: -7665261822127358610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gig_move_3
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 112
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a157f7945a0673100800000000000000
+      internalID: 87644980775974170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gig_move_4
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 112
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb995375011308420800000000000000
+      internalID: 2630156128636737983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gig_move_5
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 0
+        width: 112
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd4441ce93df7b5a0800000000000000
+      internalID: -6505452711497677605
       vertices: []
       indices: 
       edges: []
@@ -188,11 +262,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-<<<<<<< HEAD:Pandemic/Assets/Sprites/SpiderWallHor.png.meta
-    spriteID: f5a6c1cab4f73c0419e9ae8bc0bc1a6c
-=======
-    spriteID: b1177fc6851091b49b30e2a1336f6098
->>>>>>> assets:Pandemic/Assets/Sprites/rob-sprites/rob-idle.png.meta
+    spriteID: 38152fc76b16c2546aacc3961f99fbc7
     internalID: 0
     vertices: []
     indices: 
