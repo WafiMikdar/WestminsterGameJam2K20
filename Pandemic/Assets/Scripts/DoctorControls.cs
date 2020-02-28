@@ -7,7 +7,7 @@ public class DoctorControls : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
     private Vector2 doctorVelocity;
-    private DoctorAdrenalinBoost dab;
+    [SerializeField] private DoctorAdrenalinBoost dab;
 
     public float Speed { get => speed; set => speed = value; }
 
@@ -53,8 +53,8 @@ public class DoctorControls : MonoBehaviour
 
     private void OnAbilityFive()
     {
-        //dab = GameObject.Find()
-        dab.adrenalinBoost();
+        
+       // speed = dab.adrenalinBoost(ref speed);
     }
 
     private void FixedUpdate()
