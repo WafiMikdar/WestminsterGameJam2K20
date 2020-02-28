@@ -16389,7 +16389,6 @@ GameObject:
   - component: {fileID: 4818469223293863141}
   - component: {fileID: 4818469223293863143}
   - component: {fileID: 4818469223293863161}
-  - component: {fileID: 4818469223293863142}
   - component: {fileID: 4818469223293863160}
   - component: {fileID: 4818469223293863164}
   - component: {fileID: 4818469223293863163}
@@ -16398,6 +16397,8 @@ GameObject:
   - component: {fileID: 946542008}
   - component: {fileID: 946542009}
   - component: {fileID: 4818469223293863139}
+  - component: {fileID: 4818469223293863144}
+  - component: {fileID: 4818469223293863142}
   m_Layer: 0
   m_Name: Dottore
   m_TagString: Untagged
@@ -16412,7 +16413,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4818469223293863138}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 238cb1a400ade8948914e5efcf054c06, type: 3}
   m_Name: 
@@ -16458,15 +16459,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4818469223293863138}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0aa278fca1c704429f93ab143b260f9, type: 3}
+  m_Script: {fileID: 11500000, guid: 2177b0b479898f44a8e14aab2583deba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  curing: {fileID: 4818469223293863141}
-  trapPlacer: {fileID: 4818469223293863160}
-  sensorPlacer: {fileID: 4818469223293863164}
 --- !u!114 &4818469223293863143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16483,6 +16480,25 @@ MonoBehaviour:
   - 10
   - 20
   experienceBar: {fileID: 0}
+--- !u!114 &4818469223293863144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4818469223293863138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0aa278fca1c704429f93ab143b260f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  curing: {fileID: 4818469223293863141}
+  trapPlacer: {fileID: 4818469223293863160}
+  sensorPlacer: {fileID: 4818469223293863164}
+  dab: {fileID: 4818469223293863142}
+  anim: {fileID: 946542008}
+  vel: 0
 --- !u!114 &4818469223293863160
 MonoBehaviour:
   m_ObjectHideFlags: 0
