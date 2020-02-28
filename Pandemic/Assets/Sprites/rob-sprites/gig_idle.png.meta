@@ -1,16 +1,25 @@
 fileFormatVersion: 2
-guid: 81691a40a7a0b384993d24b60e857dfe
+guid: ec62aac67b51d2742860d1829e369ec8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3394409826984781572
-    second: rob-idle_0
+      213: -6979472649164455607
+    second: gig_idle_0
   - first:
-      213: -6176027819474079799
-    second: rob-idle_1
+      213: 7678944092101832463
+    second: gig_idle_1
   - first:
-      213: -2568799965887214989
-    second: rob-idle_2
+      213: 4355721276828480797
+    second: gig_idle_2
+  - first:
+      213: -8101399944286268783
+    second: gig_idle_3
+  - first:
+      213: -3636881920944742359
+    second: gig_idle_4
+  - first:
+      213: -8902907618586211261
+    second: gig_idle_5
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +49,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -107,7 +116,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rob-idle_0
+      name: gig_idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -121,14 +130,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf81a782f32a4e0d0800000000000000
-      internalID: -3394409826984781572
+      spriteID: 9418ffaba9ee32f90800000000000000
+      internalID: -6979472649164455607
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rob-idle_1
+      name: gig_idle_1
       rect:
         serializedVersion: 2
         x: 112
@@ -142,14 +151,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9cf21519b675a4aa0800000000000000
-      internalID: -6176027819474079799
+      spriteID: f0f60db87f6119a60800000000000000
+      internalID: 7678944092101832463
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rob-idle_2
+      name: gig_idle_2
       rect:
         serializedVersion: 2
         x: 224
@@ -163,8 +172,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37ac1468a0ac95cd0800000000000000
-      internalID: -2568799965887214989
+      spriteID: d15f8f57c61a27c30800000000000000
+      internalID: 4355721276828480797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gig_idle_3
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 112
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19292797cab029f80800000000000000
+      internalID: -8101399944286268783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gig_idle_4
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 112
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9206c047923378dc0800000000000000
+      internalID: -3636881920944742359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gig_idle_5
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 0
+        width: 112
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34ccc06c0b4827480800000000000000
+      internalID: -8902907618586211261
       vertices: []
       indices: 
       edges: []
@@ -172,7 +244,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: fcb6002347efa74448b6764a9aeeb629
+    spriteID: 3bd06475372e6c04ba5796dd97e61255
     internalID: 0
     vertices: []
     indices: 
