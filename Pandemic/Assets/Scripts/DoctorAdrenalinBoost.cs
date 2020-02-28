@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class DoctorAdrenalinBoost : MonoBehaviour
 {
-    [SerializeField] private DoctorControls dc;
-    [SerializeField] private float speedAmp = 2;
+    [SerializeField] private DoctorController dc;
+    [SerializeField] private float speedAmp, seconds;
 
     public void AdrenalinBoost()
     {
         dc.Speed = dc.Speed * speedAmp;
-        StartCoroutine(BoostDuration(5));
+        StartCoroutine(BoostDuration(seconds));
     }
 
     IEnumerator BoostDuration(float seconds)

@@ -11,6 +11,7 @@ public class DoctorController : MonoBehaviour
     [SerializeField] private DoctorCuring curing;
     [SerializeField] private DoctorTrapPlacer trapPlacer;
     [SerializeField] private MotionSensorPlacer sensorPlacer;
+    [SerializeField] private DoctorAdrenalinBoost dab;
 
     public float Speed { get => speed; set => speed = value; }
 
@@ -18,6 +19,10 @@ public class DoctorController : MonoBehaviour
     {
         Vector2 movementVector2 = new Vector2(playerVelocity.x, playerVelocity.y) * speed * Time.deltaTime;
         transform.Translate(movementVector2);
+        if (playerVelocity.y > movementVector2.y) { Debug.Log("up"); }
+        if (playerVelocity.y < movementVector2.y) { Debug.Log("down"); }
+        if (playerVelocity.x < movementVector2.x) { Debug.Log("left"); }
+        if (playerVelocity.x > movementVector2.x) { Debug.Log("right"); }
     }
 
     private void OnMove(InputValue value)
@@ -38,6 +43,21 @@ public class DoctorController : MonoBehaviour
     private void OnAbilityTwo()
     {
         sensorPlacer.TryPlaceSensor();
+    }
+
+    private void OnAbilityThree()
+    {
+        Debug.Log("Ability Three");
+    }
+
+    private void OnAbilityFour()
+    {
+        Debug.Log("Ability Four");
+    }
+
+    private void OnAbilityFive()
+    {
+        dab.AdrenalinBoost();
     }
 
     private void FixedUpdate()
