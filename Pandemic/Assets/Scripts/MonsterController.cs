@@ -9,6 +9,10 @@ public class MonsterController : MonoBehaviour
     private Vector2 monsterVelocity;
 
     [SerializeField] private MonsterInfecting infecting;
+    [SerializeField] private MonsterNoClip noClip;
+    [SerializeField] private MonsterWallPlacer wallPlacer;
+    [SerializeField] private MonsterUltravision ultravision;
+    [SerializeField] private MonsterEcholocation echolocation;
 
     public float Speed { get => speed; set => speed = value; }
     public Animator anim;
@@ -70,27 +74,27 @@ public class MonsterController : MonoBehaviour
 
     private void OnAbilityOne()
     {
-        Debug.Log("Ability One");
+        noClip.TryActivate();
     }
 
     private void OnAbilityTwo()
     {
-        Debug.Log("Ability Two");
+        infecting.TryLethalInfect();
     }
 
     private void OnAbilityThree()
     {
-        Debug.Log("Ability Three");
+        wallPlacer.TryPlaceWall();
     }
 
     private void OnAbilityFour()
     {
-        Debug.Log("Ability Four");
+        ultravision.TryActivate();
     }
 
     private void OnAbilityFive()
     {
-        Debug.Log("Ability Five");
+        echolocation.TryActivate();
     }
 
     private void FixedUpdate()
