@@ -202,7 +202,6 @@ GameObject:
   - component: {fileID: 190017878}
   - component: {fileID: 190017880}
   - component: {fileID: 190017877}
-  - component: {fileID: 190017881}
   m_Layer: 0
   m_Name: MonsterCamera
   m_TagString: MainCamera
@@ -344,21 +343,6 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   priority: 0
---- !u!114 &190017881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 190017876}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aff50b2511244ca4e8c3cfa89fa5318e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1796844207}
-  smoothspeed: 1
-  offset: {x: 0, y: 0, z: -1}
 --- !u!1 &326646070
 GameObject:
   m_ObjectHideFlags: 0
@@ -1468,7 +1452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1410317997}
-  smoothspeed: 1
+  smoothSpeed: 5
   offset: {x: 0, y: 0, z: -1}
 --- !u!1 &1025785189
 GameObject:
@@ -3115,7 +3099,7 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4

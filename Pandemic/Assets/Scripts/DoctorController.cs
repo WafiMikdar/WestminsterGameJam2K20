@@ -12,6 +12,7 @@ public class DoctorController : MonoBehaviour
     [SerializeField] private DoctorTrapPlacer trapPlacer;
     [SerializeField] private MotionSensorPlacer sensorPlacer;
     [SerializeField] private DoctorAdrenalinBoost dab;
+    [SerializeField] private DoctorNewsBroadcast dnb;
 
     public float Speed { get => speed; set => speed = value; }
 
@@ -52,7 +53,7 @@ public class DoctorController : MonoBehaviour
 
     private void OnAbilityFour()
     {
-        Debug.Log("Ability Four");
+        dnb.CreateNewBroadcast();
     }
 
     private void OnAbilityFive()
