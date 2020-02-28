@@ -1,13 +1,20 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class DoctorTrap : MonoBehaviour
 {
-    [SerializeField] private float activationDistance, duration;
+    [SerializeField] private float activationDistance, debuffDuration, indicatorVariance, indicatorDuration;
     private float sqrActivationDistance, monsterSpeedBackup;
 
-    private Transform monsterTransform;
+    [SerializeField] private Color indicatorColor;
+
+    private Transform monsterTransform, doctorTransform;
+
+    private RadialBarIndicator indicator;
+
+    private bool activated;
 
     private void Awake()
     {
@@ -15,9 +22,15 @@ public class DoctorTrap : MonoBehaviour
         sqrActivationDistance = activationDistance * activationDistance;
     }
 
+    public void Setup(Transform docTrans, RadialBarIndicator indicator)
+    {
+        doctorTransform = docTrans;
+        this.indicator = indicator;
+    }
+
     private void Update()
     {
-        if ((monsterTransform.position - transform.position).sqrMagnitude <= sqrActivationDistance)
+        if ((monsterTransform.position - transform.position).sqrMagnitude <= sqrActivationDistance && !activated)
         {
             Activate();
         }
@@ -25,18 +38,30 @@ public class DoctorTrap : MonoBehaviour
 
     private void Activate()
     {
-        PlayerController monsterMovement = monsterTransform.GetComponent<PlayerController>();
+        activated = true;
+        MonsterController monsterMovement = monsterTransform.GetComponent<MonsterController>();
         monsterSpeedBackup = monsterMovement.Speed;
         monsterMovement.Speed = 0;
+        StartCoroutine(ResettingMonsterSpeed(monsterMovement));
+        indicator.SetIndicator(Mathf.Atan2(doctorTransform.position.y - monsterTransform.position.y, doctorTransform.position.x - monsterTransform.position.x) * Mathf.Rad2Deg - 90,
+                               indicatorVariance, indicatorDuration, indicatorColor);
+        Explode();
     }
 
-    private IEnumerator ResettingMonsterSpeed(PlayerController monsterMovement)
+    private void Explode()
     {
-        yield return new WaitForSeconds(duration);
+        GetComponent<SpriteRenderer>().enabled = false;
+    }
 
-        if (monsterMovement.Speed == 0)
+    private IEnumerator ResettingMonsterSpeed(MonsterController monsterMovement)
+    {
+        yield return new WaitForSeconds(debuffDuration);
+
+        if (Math.Abs(monsterMovement.Speed) < 0.01f)
         {
             monsterMovement.Speed = monsterSpeedBackup;
         }
+
+        Destroy(gameObject);
     }
 }

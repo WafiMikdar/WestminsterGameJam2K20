@@ -14,12 +14,9 @@ public class DoctorCuring : MonoBehaviour
         experience = GetComponent<Experience>();
     }
 
-    private void Update()
+    public void TryCure()
     {
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            Cure();
-        }
+        Cure();
     }
 
     private void Cure()
@@ -28,7 +25,7 @@ public class DoctorCuring : MonoBehaviour
 
         foreach (Collider2D hit in hits)
         {
-            hit.GetComponent<IInfectable>()?.Cure(experience);
+            hit.GetComponent<ICurable>()?.Cure(experience);
         }
     }
 }
