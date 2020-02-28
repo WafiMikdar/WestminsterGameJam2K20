@@ -5,22 +5,42 @@ using UnityEngine;
 
 public class DoctorAdrenalinBoost : MonoBehaviour
 {
-    private void adrenalinBoost()
+    private DoctorControls dc;
+    private float secondsLeft = 0, speedAmp = 2;
+    private int count = 0;
+
+
+    public void adrenalinBoost()
     {
+        //speed = count < 1 ? count > 1 ? speed * speedAmp : StartCoroutine(boostDuration(5)): speed;
+        
+        /*if (count == 0)
+        {
+            count++;
+            return speed * speedAmp;
+        }
+
+        if (count == 1)
+        {
+            count = 0;
+            return speed / speedAmp;
+        }
+
+        return speed;*/
+        dc.Speed = dc.Speed * speedAmp;
+        StartCoroutine(boostDuration(5));
+
 
     }
 
-    private float secondsLeft = 0, speedAmp = 2;
-
-    void Start() { StartCoroutine(boostDuration(5)); }
-
     IEnumerator boostDuration(float seconds)
     {
-        secondsLeft = seconds;
-        do { yield return new WaitForSeconds(1); }
-        while (--secondsLeft > 1);
-        DoctorControls.Speed.g * speedAmp;
-        while (--secondsLeft < 1) ;
-        // speed / speedAmp;
+        yield return new WaitForSeconds(seconds);
+        revertSpeed();
+    }
+
+    void revertSpeed()
+    {
+        dc.Speed = dc.Speed / speedAmp;
     }
 }
