@@ -40,6 +40,21 @@ public class MonsterController : MonoBehaviour
         Debug.Log("Ability two. Logun called me a retard, he a meanie :(");
     }
 
+    private void OnAbilityThree()
+    {
+        Debug.Log("Ability Three");
+    }
+
+    private void OnAbilityFour()
+    {
+        Debug.Log("Ability Four");
+    }
+
+    private void OnAbilityFive()
+    {
+        Debug.Log("Ability Five");
+    }
+
     private void FixedUpdate()
     {
         Move();
