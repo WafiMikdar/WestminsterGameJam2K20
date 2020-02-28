@@ -202,6 +202,7 @@ GameObject:
   - component: {fileID: 190017878}
   - component: {fileID: 190017880}
   - component: {fileID: 190017877}
+  - component: {fileID: 190017881}
   m_Layer: 0
   m_Name: MonsterCamera
   m_TagString: MainCamera
@@ -343,6 +344,21 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   priority: 0
+--- !u!114 &190017881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190017876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aff50b2511244ca4e8c3cfa89fa5318e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1796844207}
+  smoothspeed: 1
+  offset: {x: 0, y: 0, z: -1}
 --- !u!1 &326646070
 GameObject:
   m_ObjectHideFlags: 0
@@ -1297,6 +1313,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194229}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: DoctorCamera
   m_TagString: MainCamera
@@ -1438,6 +1455,21 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &963194230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aff50b2511244ca4e8c3cfa89fa5318e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1410317997}
+  smoothspeed: 1
+  offset: {x: 0, y: 0, z: -1}
 --- !u!1 &1025785189
 GameObject:
   m_ObjectHideFlags: 0
@@ -1935,6 +1967,7 @@ MonoBehaviour:
   curing: {fileID: 1410317996}
   trapPlacer: {fileID: 1410318001}
   sensorPlacer: {fileID: 1410318005}
+  dab: {fileID: 0}
 --- !u!114 &1410318000
 MonoBehaviour:
   m_ObjectHideFlags: 0
