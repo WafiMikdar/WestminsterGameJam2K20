@@ -17,6 +17,7 @@ public class DoctorController : MonoBehaviour
     public Animator anim;
     private SpriteRenderer spR;
     public float vel;
+    public float animSwitch;
     private void Start()
     {
         spR = GetComponent<SpriteRenderer>();
@@ -38,13 +39,13 @@ public class DoctorController : MonoBehaviour
 
         vel = Mathf.Sqrt(Mathf.Pow(movementVector2.x, 2) + Mathf.Pow(movementVector2.y, 2));
 
+        anim.SetFloat("Vel", vel);
+
         if (playerVelocity.y > movementVector2.y)
         {
             Debug.Log("up");
             anim.Play("Run");
         }
-
-        anim.SetFloat("Vel", vel);
 
         if (playerVelocity.y < movementVector2.y)
         {
@@ -73,16 +74,21 @@ public class DoctorController : MonoBehaviour
     private void OnAttack()
     {
         curing.TryCure();
+        anim.Play("Run");
     }
 
     private void OnAbilityOne()
     {
         trapPlacer.TryPlaceTrap();
+        anim.SetBool("animSwitch", true);
+        anim.Play("Cure");
+        anim.SetBool("animSwitch", false);
     }
 
     private void OnAbilityTwo()
     {
         sensorPlacer.TryPlaceSensor();
+
     }
 
     private void OnAbilityThree()

@@ -12,10 +12,54 @@ public class MonsterController : MonoBehaviour
 
     public float Speed { get => speed; set => speed = value; }
 
+    public Animator anim;
+    private SpriteRenderer spR;
+    public float vel;
+    private void Start()
+    {
+        spR = GetComponent<SpriteRenderer>();
+    }
+
     private void Move()
     {
         Vector2 movementVector2 = new Vector2(monsterVelocity.x, monsterVelocity.y) * speed * Time.deltaTime;
         transform.Translate(movementVector2);
+        if (monsterVelocity.x < 0)
+        {
+            spR.flipX = false;
+        }
+        else if (monsterVelocity.x > 0)
+        {
+            spR.flipX = true;
+        }
+
+        vel = Mathf.Sqrt(Mathf.Pow(movementVector2.x, 2) + Mathf.Pow(movementVector2.y, 2));
+
+        if (monsterVelocity.y > movementVector2.y)
+        {
+            Debug.Log("up");
+            anim.Play("Run1");
+        }
+
+        anim.SetFloat("Vel", vel);
+
+        if (monsterVelocity.y < movementVector2.y)
+        {
+            Debug.Log("down");
+            anim.Play("Run1");
+        }
+
+        if (monsterVelocity.x < movementVector2.x)
+        {
+            Debug.Log("left");
+            anim.Play("Run1");
+        }
+
+        if (monsterVelocity.x > movementVector2.x)
+        {
+            Debug.Log("right");
+            anim.Play("Run1");
+        }
     }
 
     private void OnMove(InputValue value)

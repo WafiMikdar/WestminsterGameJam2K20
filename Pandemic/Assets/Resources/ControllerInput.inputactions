@@ -656,7 +656,7 @@
                 {
                     "name": "",
                     "id": "35c6e87b-3112-47f9-8af7-0b5109d5d8a9",
-                    "path": "<Keyboard>/numpad2",
+                    "path": "<Keyboard>/k",
                     "interactions": "Press",
                     "processors": "",
                     "groups": "arrowKeyboard",
