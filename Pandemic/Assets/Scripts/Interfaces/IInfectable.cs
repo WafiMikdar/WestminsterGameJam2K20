@@ -9,5 +9,5 @@
 
 public interface IInfectable
 {
-    void Infect(Experience source);
+    void Infect(Experience source, float duration = -1);
 }
