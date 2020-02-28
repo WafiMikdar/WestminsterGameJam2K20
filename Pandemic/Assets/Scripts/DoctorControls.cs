@@ -53,8 +53,7 @@ public class DoctorControls : MonoBehaviour
 
     private void OnAbilityFive()
     {
-        
-       // speed = dab.adrenalinBoost(ref speed);
+        dab.AdrenalinBoost();
     }
 
     private void FixedUpdate()
