@@ -36,6 +36,30 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "Press"
+                },
+                {
+                    "name": "AbilityThree",
+                    "type": "Button",
+                    "id": "b2a9694a-f9dd-4460-a7b9-e2c25ab16d52",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press"
+                },
+                {
+                    "name": "AbilityFour",
+                    "type": "Button",
+                    "id": "9fe0f952-7173-44d7-ad5a-9102e0e776f6",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press"
+                },
+                {
+                    "name": "AbilityFive",
+                    "type": "Button",
+                    "id": "65a05d07-ae83-49ac-ba93-6637ac75e6f6",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press"
                 }
             ],
             "bindings": [
@@ -258,6 +282,105 @@
                     "action": "AbilityTwo",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ea3a0d7b-fb9d-42bd-ace0-b752e595001b",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "AbilityThree",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9bc6d50d-3e83-4e7a-86a9-fc3cc80f231d",
+                    "path": "<Keyboard>/r",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "wasdKeyboard",
+                    "action": "AbilityThree",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dfe35559-7073-4ae0-b5d2-10efdc2f7ff9",
+                    "path": "<Keyboard>/numpad4",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "arrowKeyboard",
+                    "action": "AbilityThree",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "33f24c32-4b8e-4222-ae44-7050b7368ca2",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "AbilityFour",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "84932f22-7a34-4393-ac66-5b89bda3e6e6",
+                    "path": "<Keyboard>/c",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "wasdKeyboard",
+                    "action": "AbilityFour",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "874a8f7a-6847-43c3-9b3a-f1400713101d",
+                    "path": "<Keyboard>/numpad5",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "arrowKeyboard",
+                    "action": "AbilityFour",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a2ba023a-231d-4f74-bc53-14e83e81998d",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "AbilityFive",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bf4a3b44-fe7c-44a5-9f85-678d25c7d149",
+                    "path": "<Keyboard>/x",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "wasdKeyboard",
+                    "action": "AbilityFive",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fc1b02c3-aaba-4219-ba6c-5ccc45c0e14c",
+                    "path": "<Keyboard>/numpad6",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "arrowKeyboard",
+                    "action": "AbilityFive",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -293,6 +416,30 @@
                     "name": "Attack",
                     "type": "Button",
                     "id": "83aaed68-0011-4764-b111-ab1232b82144",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press"
+                },
+                {
+                    "name": "AbilityThree",
+                    "type": "Button",
+                    "id": "a42337de-953c-4ce7-8c1f-68b601374767",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press"
+                },
+                {
+                    "name": "AbilityFour",
+                    "type": "Button",
+                    "id": "7f6ad024-e628-47e0-afff-9c9af5c9868e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press"
+                },
+                {
+                    "name": "AbilityFive",
+                    "type": "Button",
+                    "id": "c093901b-027d-4d6d-8cdf-7ff03af62b19",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "Press"
@@ -342,6 +489,39 @@
                     "action": "AbilityTwo",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f6d0d5f1-3119-4743-9ae0-2953b706b0c1",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "AbilityThree",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8d564612-e4b8-4293-8cb1-6cde2cda570a",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "AbilityFour",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fbc072ba-9c69-4204-ba8c-f7bebcc59cbe",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "AbilityFive",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -380,6 +560,30 @@
                     "expectedControlType": "Stick",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "AbilityFive",
+                    "type": "Button",
+                    "id": "b93a6e81-8218-4e62-a92a-11eb89247a85",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press"
+                },
+                {
+                    "name": "AbilityFour",
+                    "type": "Button",
+                    "id": "34f6c279-91f5-4d60-a1dd-e44f2905440d",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press"
+                },
+                {
+                    "name": "AbilityThree",
+                    "type": "Button",
+                    "id": "4ef5b999-3744-43cf-95ae-5ca5126e43da",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press"
                 }
             ],
             "bindings": [
@@ -470,6 +674,39 @@
                     "action": "AbilityTwo",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "23e79d8d-afe1-438d-a6b5-628ef137bc79",
+                    "path": "<Keyboard>/numpad4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "arrowKeyboard",
+                    "action": "AbilityThree",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3182ac5d-eaa9-4558-89a9-d0e26a43240b",
+                    "path": "<Keyboard>/numpad5",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "arrowKeyboard",
+                    "action": "AbilityFour",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d306a9fc-3031-463d-bb24-d99038e34f44",
+                    "path": "<Keyboard>/numpad6",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "arrowKeyboard",
+                    "action": "AbilityFive",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -508,6 +745,30 @@
                     "expectedControlType": "Stick",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "AbilityFive",
+                    "type": "Button",
+                    "id": "d371b8ca-4c5b-4f4d-8a66-e67fe8715e5b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press"
+                },
+                {
+                    "name": "AbilityFour",
+                    "type": "Button",
+                    "id": "36a04e52-0563-4257-a68b-5caffa3e57cb",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press"
+                },
+                {
+                    "name": "AbilityThree",
+                    "type": "Button",
+                    "id": "463af400-e0ef-4655-98bc-81e8cb70e108",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press"
                 }
             ],
             "bindings": [
@@ -596,6 +857,39 @@
                     "processors": "",
                     "groups": "wasdKeyboard",
                     "action": "AbilityTwo",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "51ab0731-c8c5-4815-9ed0-6a1014d609d5",
+                    "path": "<Keyboard>/r",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "wasdKeyboard",
+                    "action": "AbilityThree",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "be5809da-b00a-4414-bd57-9718c1cfbfab",
+                    "path": "<Keyboard>/c",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "wasdKeyboard",
+                    "action": "AbilityFour",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4bd093b7-7458-4955-a2f7-69c957e6cc44",
+                    "path": "<Keyboard>/x",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "wasdKeyboard",
+                    "action": "AbilityFive",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
