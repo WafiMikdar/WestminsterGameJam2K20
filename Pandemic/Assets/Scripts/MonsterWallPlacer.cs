@@ -44,6 +44,6 @@ public class MonsterWallPlacer : MonoBehaviour
         Vector2 downHitPos = Physics2D.Raycast(transform.position, Vector2.down, Mathf.Infinity, buildingLayer).point;
         Vector2 leftHitPos = Physics2D.Raycast(transform.position, Vector2.left, Mathf.Infinity, buildingLayer).point;
 
-        return upHitPos.y - downHitPos.y < leftHitPos.x - rightHitPos.x ? (upHitPos, downHitPos, false) : (leftHitPos, rightHitPos, true);
+        return Mathf.Abs(upHitPos.y - downHitPos.y) < Mathf.Abs(leftHitPos.x - rightHitPos.x) ? (upHitPos, downHitPos, false) : (leftHitPos, rightHitPos, true);
     }
 }
