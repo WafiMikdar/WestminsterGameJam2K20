@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class DoctorTrap : MonoBehaviour
 {
-    [SerializeField] private float activationDistance, debuffDuration, indicatorVariation;
+    [SerializeField] private float activationDistance, debuffDuration, indicatorVariance, indicatorDuration;
     private float sqrActivationDistance, monsterSpeedBackup;
+
+    [SerializeField] private Color indicatorColor;
 
     private Transform monsterTransform, doctorTransform;
 
@@ -41,7 +43,8 @@ public class DoctorTrap : MonoBehaviour
         monsterSpeedBackup = monsterMovement.Speed;
         monsterMovement.Speed = 0;
         StartCoroutine(ResettingMonsterSpeed(monsterMovement));
-        indicator.SetIndicator(Mathf.Atan2(doctorTransform.position.y - monsterTransform.position.y, doctorTransform.position.x - monsterTransform.position.x) * Mathf.Rad2Deg - 90, indicatorVariation);
+        indicator.SetIndicator(Mathf.Atan2(doctorTransform.position.y - monsterTransform.position.y, doctorTransform.position.x - monsterTransform.position.x) * Mathf.Rad2Deg - 90,
+                               indicatorVariance, indicatorDuration, indicatorColor);
         Explode();
     }
 

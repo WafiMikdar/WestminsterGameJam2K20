@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(HealthBar))]
-public class HumanHealth : MonoBehaviour, IInfectable
+public class HumanHealth : MonoBehaviour, IInfectable, ICurable
 {
     [SerializeField] private float infectionDuration, incubationDuration, curingDuration;
     private float infectionProgress, incubationProgress;

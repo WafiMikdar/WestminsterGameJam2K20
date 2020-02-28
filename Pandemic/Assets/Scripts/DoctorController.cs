@@ -10,6 +10,7 @@ public class DoctorController : MonoBehaviour
 
     [SerializeField] private DoctorCuring curing;
     [SerializeField] private DoctorTrapPlacer trapPlacer;
+    [SerializeField] private MotionSensorPlacer sensorPlacer;
 
     public float Speed { get => speed; set => speed = value; }
 
@@ -36,7 +37,7 @@ public class DoctorController : MonoBehaviour
 
     private void OnAbilityTwo()
     {
-        Debug.Log("Ability Two");
+        sensorPlacer.TryPlaceSensor();
     }
 
     private void FixedUpdate()

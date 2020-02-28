@@ -5,32 +5,33 @@ using UnityEngine.UI;
 
 public class RadialBarIndicator : MonoBehaviour
 {
-    [SerializeField] private Image radialBar;
+    [SerializeField] private GameObject radialBarPrefab;
+
+    [SerializeField] private Transform canvas;
 
     [SerializeField] private AnimationCurve alphaCurve;
 
-    [SerializeField] private float fadeDuration;
-
-    public void SetIndicator(float angle, float variation)
+    public void SetIndicator(float angle, float variance, float duration, Color color)
     {
-        float centerAngle = angle + Random.Range(0, variation);
-        radialBar.fillAmount = variation / 360f;
+        Image radialBar = Instantiate(radialBarPrefab, transform.position, Quaternion.identity, canvas).transform.GetChild(0).GetComponent<Image>();
+        radialBar.color = color;
+        float centerAngle = angle + Random.Range(0, variance);
+        radialBar.fillAmount = variance / 360f;
         radialBar.transform.parent.rotation = Quaternion.Euler(0, 0, centerAngle);
-        radialBar.transform.parent.gameObject.SetActive(true);
-        StartCoroutine(DeactivatingIndicator());
+        StartCoroutine(DeactivatingIndicator(radialBar, duration));
     }
 
-    private IEnumerator DeactivatingIndicator()
+    private IEnumerator DeactivatingIndicator(Image radialBar, float duration)
     {
-        float startTime = Time.time, endTime = startTime + fadeDuration;
+        float startTime = Time.time, endTime = startTime + duration;
 
         while (endTime > Time.time)
         {
             radialBar.color = new Color(radialBar.color.r, radialBar.color.g, radialBar.color.b,
-                                        alphaCurve.Evaluate((Time.time - startTime) / fadeDuration));
+                                        alphaCurve.Evaluate((Time.time - startTime) / duration));
             yield return null;
         }
 
-        radialBar.transform.parent.gameObject.SetActive(false);
+        Destroy(radialBar.transform.parent.gameObject);
     }
 }

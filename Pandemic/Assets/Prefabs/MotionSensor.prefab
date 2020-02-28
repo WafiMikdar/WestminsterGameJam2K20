@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8420153788966475293}
   - component: {fileID: 8420153788966475290}
-  - component: {fileID: 8420153788966475292}
+  - component: {fileID: -614247933802398328}
   m_Layer: 8
-  m_Name: TripTrap
+  m_Name: MotionSensor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 784e959f796599247a276c20ea1d5eb2, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7607844, g: 0.7607844, b: 0.7607844, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8420153788966475292
+--- !u!114 &-614247933802398328
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,11 +91,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 8420153788966475291}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4037e62304cca2747ac7132d0b790b2a, type: 3}
+  m_Script: {fileID: 11500000, guid: f60e98eac89e7a54fb74cf16c47d53f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activationDistance: 2
-  debuffDuration: 5
-  indicatorVariance: 50
-  indicatorDuration: 1
-  indicatorColor: {r: 1, g: 0.9934666, b: 0.07075471, a: 0}
+  detectionRadius: 30
+  indicatorVariance: 10
+  indicatorDuration: 1.5
+  notificationCooldown: 1.7
+  duration: 100
+  indicatorColor: {r: 0.33374867, g: 0.9433962, b: 0.8720193, a: 0}
+  buildingLayer:
+    serializedVersion: 2
+    m_Bits: 512

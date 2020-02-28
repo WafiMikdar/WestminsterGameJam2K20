@@ -10,6 +10,4 @@
 public interface IInfectable
 {
     void Infect(Experience source);
-
-    void Cure(Experience source);
 }
