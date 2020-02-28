@@ -236,8 +236,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  infecting: {fileID: 0}
-  noClip: {fileID: 0}
 --- !u!212 &767893930
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -512,8 +510,6 @@ GameObject:
   - component: {fileID: 2060417956}
   - component: {fileID: 2060417958}
   - component: {fileID: 2060417959}
-  - component: {fileID: 2060417960}
-  - component: {fileID: 2060417961}
   m_Layer: 0
   m_Name: Doctor
   m_TagString: Untagged
@@ -579,7 +575,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2060417955}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.49, y: 2.55, z: 0}
+  m_LocalPosition: {x: -2.029, y: 0.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -629,31 +625,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  dab: {fileID: 2060417960}
---- !u!114 &2060417960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2060417955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2177b0b479898f44a8e14aab2583deba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dc: {fileID: 2060417959}
-  speedAmp: 2
-  seconds: 5
---- !u!114 &2060417961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2060417955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 612deca76a1a6454b817cb3ede3e0abb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
