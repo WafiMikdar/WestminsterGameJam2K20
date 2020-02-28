@@ -10,6 +10,7 @@ public class DoctorControls : MonoBehaviour
 
     public float Speed { get => speed; set => speed = value; }
 
+
     private void Move()
     {
         Vector2 movementVector2 = new Vector2(monsterVelocity.x, monsterVelocity.y) * speed * Time.deltaTime;
