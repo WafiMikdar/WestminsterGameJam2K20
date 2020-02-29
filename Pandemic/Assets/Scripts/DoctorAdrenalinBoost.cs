@@ -6,6 +6,7 @@ public class DoctorAdrenalinBoost : MonoBehaviour
     [SerializeField] private DoctorController dc;
     [SerializeField] private float speedAmp, seconds;
     [SerializeField] private DoctorSFX doctorSfx;
+    //[SerializeField] private DoctorSFX doctorSfx;
 
     public void AdrenalinBoost()
     {
@@ -15,10 +16,12 @@ public class DoctorAdrenalinBoost : MonoBehaviour
             doctorSfx.PlaySFX(doctorSfx.DoctorAdrenalinBoost);
             StartCoroutine(BoostDuration(seconds));
         }
-       
+
+        //doctorSfx.PlaySFX(doctorSfx.DoctorAdrenalinBoost);
+        StartCoroutine(BoostDuration(seconds));
     }
 
-    IEnumerator BoostDuration(float seconds)
+    private IEnumerator BoostDuration(float seconds)
     {
         yield return new WaitForSeconds(seconds);
         dc.Speed = dc.Speed / speedAmp;

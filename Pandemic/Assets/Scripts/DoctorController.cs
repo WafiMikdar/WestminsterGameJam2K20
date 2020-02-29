@@ -15,18 +15,87 @@ public class DoctorController : MonoBehaviour
     [SerializeField] private DoctorNewsBroadcast doctorNewsBroadcast;
     [SerializeField] private SupplyDropAbilitySlot supplyDropAbility;
     [SerializeField] private DoctorSFX doctorSfx;
+    [SerializeField] private DoctorAdrenalinBoost dab;
 
-    public float Speed { get => speed; set => speed = value; }
+    public float Speed
+    {
+        get => speed;
+        set => speed = value;
+    }
+
+    public Animator anim;
+    private SpriteRenderer spR;
+    public float vel;
+    public float animSwitch;
+    private bool ableToMove = true;
+
+    private void Start()
+    {
+        spR = GetComponent<SpriteRenderer>();
+    }
 
     private void Move()
     {
         Vector2 movementVector2 = new Vector2(playerVelocity.x, playerVelocity.y) * speed * Time.deltaTime;
+
         transform.Translate(movementVector2);
-        if (playerVelocity.y > movementVector2.y) { Debug.Log("up"); }
-        if (playerVelocity.y < movementVector2.y) { Debug.Log("down"); }
-        if (playerVelocity.x < movementVector2.x) { Debug.Log("left"); }
-        if (playerVelocity.x > movementVector2.x) { Debug.Log("right"); }
-        
+
+        if (playerVelocity.y > movementVector2.y)
+        {
+            Debug.Log("up");
+        }
+
+        if (playerVelocity.y < movementVector2.y)
+        {
+            Debug.Log("down");
+        }
+
+        if (playerVelocity.x < movementVector2.x)
+        {
+            Debug.Log("left");
+        }
+
+        if (playerVelocity.x > movementVector2.x)
+        {
+            Debug.Log("right");
+        }
+
+        if (playerVelocity.x < 0)
+        {
+            spR.flipX = true;
+        }
+        else if (playerVelocity.x > 0)
+        {
+            spR.flipX = false;
+        }
+
+        vel = Mathf.Sqrt(Mathf.Pow(movementVector2.x, 2) + Mathf.Pow(movementVector2.y, 2));
+
+        anim.SetFloat("Vel", vel);
+
+        if (playerVelocity.y > movementVector2.y)
+        {
+            Debug.Log("up");
+            anim.Play("Run");
+        }
+
+        if (playerVelocity.y < movementVector2.y)
+        {
+            Debug.Log("down");
+            anim.Play("Run");
+        }
+
+        if (playerVelocity.x < movementVector2.x)
+        {
+            Debug.Log("left");
+            anim.Play("Run");
+        }
+
+        if (playerVelocity.x > movementVector2.x)
+        {
+            Debug.Log("right");
+            anim.Play("Run");
+        }
     }
 
     private void OnMove(InputValue value)
@@ -37,38 +106,47 @@ public class DoctorController : MonoBehaviour
 
     private void OnAttack()
     {
-        curing.TryCure(); 
-        
+        curing.TryCure();
+        anim.Play("Cure");
     }
 
     private void OnAbilityOne()
     {
         trapPlacer.TryPlaceTrap();
+        anim.Play("Cure");
     }
 
     private void OnAbilityTwo()
     {
-        sensorPlacer.TryActivate();
+        dab.AdrenalinBoost();
+        anim.Play("Inject");
     }
 
     private void OnAbilityThree()
     {
-        supplyDropAbility.TryActivate();
+        sensorPlacer.TryActivate();
     }
 
     private void OnAbilityFour()
     {
-        doctorNewsBroadcast.CreateNewBroadcast();
+        supplyDropAbility.TryActivate();
     }
 
-    private void OnAbilityFive()
+    public void canMove()
     {
-        doctorAdrenalinBoost.AdrenalinBoost();
+        ableToMove = true;
+    }
 
+    public void notMove()
+    {
+        ableToMove = false;
     }
 
     private void FixedUpdate()
     {
-        Move();
+        if (ableToMove)
+        {
+            Move();
+        }
     }
 }

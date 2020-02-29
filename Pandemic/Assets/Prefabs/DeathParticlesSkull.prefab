@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7179433364882605574}
   - component: {fileID: 3875417634963167099}
   - component: {fileID: 3145531483227608294}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: DeathParticlesSkull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,9 +47,9 @@ ParticleSystem:
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 1
+  looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -4807,7 +4807,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 1
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -4924,11 +4924,26 @@ PrefabInstance:
       propertyPath: InitialModule.startLifetime.scalar
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 94412117952708082, guid: 0d96cd903595713458bce13bf8883ed8,
+        type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 94412117952708082, guid: 0d96cd903595713458bce13bf8883ed8,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2242925292660555375, guid: 0d96cd903595713458bce13bf8883ed8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 2242925292660555375, guid: 0d96cd903595713458bce13bf8883ed8,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2844513374402886910, guid: 0d96cd903595713458bce13bf8883ed8,
         type: 3}
       propertyPath: m_Name
