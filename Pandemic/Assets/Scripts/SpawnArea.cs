@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 [RequireComponent(typeof(BoxCollider2D))]
 public class SpawnArea : MonoBehaviour
 {
-    [SerializeField] private GameObject prefab;
+    [SerializeField] private GameObject[] prefabs;
 
     [SerializeField] private float minSpawnCooldown, maxSpawnCooldown;
 
@@ -37,7 +37,7 @@ public class SpawnArea : MonoBehaviour
 
     private void Spawn()
     {
-        ICallOnDestroy newInstance = Instantiate(prefab, GetSpawnPosition(), Quaternion.identity, transform).GetComponent<ICallOnDestroy>();
+        ICallOnDestroy newInstance = Instantiate(prefabs[Random.Range(0, prefabs.Length)], GetSpawnPosition(), Quaternion.identity, transform).GetComponent<ICallOnDestroy>();
         spawned.Add(newInstance);
         newInstance?.SetupCallOnDestroy(() => RemoveSpawned(newInstance));
     }
