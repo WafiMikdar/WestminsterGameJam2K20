@@ -16,6 +16,8 @@ public class HumanHealth : MonoBehaviour, IInfectable, ICurable
     private Experience experienceTarget;
 
     private InfectionStatus status = InfectionStatus.Healthy;
+    public InfectionStatus Status => status;
+    public bool IsHealthy => status == InfectionStatus.Healthy || status == InfectionStatus.Cured;
 
     private void Awake()
     {
