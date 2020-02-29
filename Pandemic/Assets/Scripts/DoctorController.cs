@@ -26,9 +26,6 @@ public class DoctorController : MonoBehaviour
 
     [SerializeField] private SupplyDropAbilitySlot supplyDropAbility;
 
-    public float Speed { get => speed; set => speed = value; }
-
-
     private void Move()
     {
         Vector2 movementVector2 = new Vector2(playerVelocity.x, playerVelocity.y) * speed * Time.deltaTime;
