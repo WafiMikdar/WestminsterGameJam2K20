@@ -11,15 +11,12 @@ public class DoctorController : MonoBehaviour
     [SerializeField] private DoctorCuring curing;
     [SerializeField] private DoctorTrapPlacer trapPlacer;
     [SerializeField] private MotionSensorPlacer sensorPlacer;
-<<<<<<< HEAD
     [SerializeField] private DoctorAdrenalinBoost doctorAdrenalinBoost;
     [SerializeField] private DoctorNewsBroadcast doctorNewsBroadcast;
     [SerializeField] private SupplyDropAbilitySlot supplyDropAbility;
     [SerializeField] private DoctorSFX doctorSfx;
-=======
 
-    [SerializeField] private DoctorAdrenalinBoost dab;
->>>>>>> Level
+
 
     public float Speed { get => speed; set => speed = value; }
 
@@ -33,7 +30,7 @@ public class DoctorController : MonoBehaviour
         spR = GetComponent<SpriteRenderer>();
     }
 
-    [SerializeField] private SupplyDropAbilitySlot supplyDropAbility;
+    
     public void StopMovement(int active)
     {
 
@@ -46,16 +43,7 @@ public class DoctorController : MonoBehaviour
     private void Move()
     {
         Vector2 movementVector2 = new Vector2(playerVelocity.x, playerVelocity.y) * speed * Time.deltaTime;
-
         transform.Translate(movementVector2);
-<<<<<<< HEAD
-        if (playerVelocity.y > movementVector2.y) { Debug.Log("up"); }
-        if (playerVelocity.y < movementVector2.y) { Debug.Log("down"); }
-        if (playerVelocity.x < movementVector2.x) { Debug.Log("left"); }
-        if (playerVelocity.x > movementVector2.x) { Debug.Log("right"); }
-        
-=======
-
         if (playerVelocity.x < 0)
         {
             spR.flipX = true;
@@ -92,7 +80,6 @@ public class DoctorController : MonoBehaviour
             Debug.Log("right");
             anim.Play("Run");
         }
->>>>>>> Level
     }
 
     private void OnMove(InputValue value)
@@ -103,13 +90,8 @@ public class DoctorController : MonoBehaviour
 
     private void OnAttack()
     {
-<<<<<<< HEAD
-        curing.TryCure(); 
-        
-=======
         curing.TryCure();
         anim.Play("Cure");
->>>>>>> Level
     }
 
     private void OnAbilityOne()
@@ -120,40 +102,21 @@ public class DoctorController : MonoBehaviour
 
     private void OnAbilityTwo()
     {
-<<<<<<< HEAD
         sensorPlacer.TryActivate();
-=======
-        dab.adrenalinBoost();
+        doctorAdrenalinBoost.AdrenalinBoost();
         anim.Play("Inject");
->>>>>>> Level
     }
 
     private void OnAbilityThree()
-    {
+    { 
+        doctorAdrenalinBoost.AdrenalinBoost();
+    }
 
-<<<<<<< HEAD
-    private void OnAbilityFour()
+    private void OnAbilityFour() 
     {
-        doctorNewsBroadcast.CreateNewBroadcast();
-=======
         sensorPlacer.TryActivate();
         anim.Play("Cure");
     }
-  
-    private void OnAbilityFour()
-    {
-        supplyDropAbility.TryActivate();
->>>>>>> Level
-    }
-
-    private void OnAbilityFive()
-    {
-<<<<<<< HEAD
-        doctorAdrenalinBoost.AdrenalinBoost();
-
-=======
-
-    } //Not in Use
 
     public void canMove()
     {
@@ -162,7 +125,6 @@ public class DoctorController : MonoBehaviour
     public void notMove()
     {
         ableToMove = false;
->>>>>>> Level
     }
 
     private void FixedUpdate()

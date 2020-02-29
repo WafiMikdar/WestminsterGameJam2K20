@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Experience))]
 public class MonsterProgression : MonoBehaviour
 {
+
+    [SerializeField] private MonsterSfx monsterSfx;
     private void Awake()
     {
         GetComponent<Experience>().onLevelUp += LevelUp;
@@ -12,6 +14,7 @@ public class MonsterProgression : MonoBehaviour
 
     private void LevelUp(uint newLevel)
     {
+        monsterSfx.PlaySFX(monsterSfx.MonsterEvolution);
         switch (newLevel)
         {
             case 1:
