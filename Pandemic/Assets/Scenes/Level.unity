@@ -326,7 +326,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3bf63a2ce1eeef846b04e3d65253ebb0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1604,6 +1604,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1198470560}
   - component: {fileID: 1198470559}
+  - component: {fileID: 1198470561}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -1646,6 +1647,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1198470561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198470558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88481ba999bca1a4c87f13612ef3ab4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderers:
+  - {fileID: 1483909645}
+  - {fileID: 1239836653}
+  - {fileID: 1447267042}
+  - {fileID: 1893529050}
+  - {fileID: 1870679625}
+  - {fileID: 1019748106}
+  monsterTransform: {fileID: 159211421}
+  doctorTransform: {fileID: 4818469223293863140}
 --- !u!1 &1239836651
 GameObject:
   m_ObjectHideFlags: 0
@@ -1696,7 +1718,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3bf63a2ce1eeef846b04e3d65253ebb0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2842,6 +2864,16 @@ PrefabInstance:
       propertyPath: anim
       value: 
       objectReference: {fileID: 159211422}
+    - target: {fileID: 6314589998120943581, guid: 39f76ea0192aaf040affc1bc8e5d9308,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314589998120943581, guid: 39f76ea0192aaf040affc1bc8e5d9308,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 1.75
+      objectReference: {fileID: 0}
     - target: {fileID: 6314589998120943583, guid: 39f76ea0192aaf040affc1bc8e5d9308,
         type: 3}
       propertyPath: m_DefaultControlScheme
@@ -2943,6 +2975,7 @@ GameObject:
   - component: {fileID: 1434351051}
   - component: {fileID: 1434351050}
   - component: {fileID: 1434351052}
+  - component: {fileID: 1434351053}
   m_Layer: 0
   m_Name: DoctorCamera
   m_TagString: MainCamera
@@ -3023,6 +3056,37 @@ MonoBehaviour:
   smoothSpeed: 5
   maxSpeed: 0
   offset: {x: 0, y: 0, z: -11}
+--- !u!114 &1434351053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434351049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_CameraOutput: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &1447267040
 GameObject:
   m_ObjectHideFlags: 0
@@ -3073,7 +3137,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3bf63a2ce1eeef846b04e3d65253ebb0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20800,7 +20864,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3bf63a2ce1eeef846b04e3d65253ebb0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31434,7 +31498,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3bf63a2ce1eeef846b04e3d65253ebb0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33384,7 +33448,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3bf63a2ce1eeef846b04e3d65253ebb0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -61043,6 +61107,7 @@ GameObject:
   - component: {fileID: 2052642896}
   - component: {fileID: 2052642895}
   - component: {fileID: 2052642897}
+  - component: {fileID: 2052642898}
   m_Layer: 0
   m_Name: MonsterCamera
   m_TagString: MainCamera
@@ -61123,6 +61188,37 @@ MonoBehaviour:
   smoothSpeed: 5
   maxSpeed: 0
   offset: {x: 0, y: 0, z: -11}
+--- !u!114 &2052642898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052642894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_CameraOutput: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &4818469223293863138
 GameObject:
   m_ObjectHideFlags: 0
@@ -61227,6 +61323,7 @@ MonoBehaviour:
   anim: {fileID: 946542008}
   vel: 0
   animSwitch: 0
+  supplyDropAbility: {fileID: 0}
 --- !u!114 &4818469223293863160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61349,6 +61446,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sensorPrefab: {fileID: 8420153788966475291, guid: 930d26e3b13466e499ca95f7a194e6dd,
     type: 3}
+  directionalIndicator: {fileID: 0}
+  totalUses: 3
 --- !u!114 &4818469223293863165
 MonoBehaviour:
   m_ObjectHideFlags: 0

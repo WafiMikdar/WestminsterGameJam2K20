@@ -70,7 +70,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 7
   m_Sprite: {fileID: 21300000, guid: 784e959f796599247a276c20ea1d5eb2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -94,8 +94,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4037e62304cca2747ac7132d0b790b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activationDistance: 2
-  debuffDuration: 5
+  activationDistance: 0.5
+  debuffDuration: 2
   indicatorVariance: 50
   indicatorDuration: 1
   indicatorColor: {r: 1, g: 0.9934666, b: 0.07075471, a: 0}

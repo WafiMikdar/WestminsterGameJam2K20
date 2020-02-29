@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,14 +22,16 @@ public class HumanHealth : MonoBehaviour, IInfectable, ICurable
         healthBar = GetComponent<HealthBar>();
     }
 
-    public void Infect(Experience source)
+    public void Infect(Experience source, float duration = -1)
     {
         experienceTarget = source;
+
+        float infectionDuration = Math.Abs(duration - (-1)) < 0.01f ? this.infectionDuration : duration;
 
         switch (status)
         {
             case InfectionStatus.Healthy:
-                StartIncubation();
+                StartIncubation(incubationDuration, infectionDuration);
                 break;
 
             case InfectionStatus.Curing:
@@ -39,20 +42,20 @@ public class HumanHealth : MonoBehaviour, IInfectable, ICurable
                 break;
 
             case InfectionStatus.Cured:
-                StartIncubation();
+                StartIncubation(incubationDuration, infectionDuration);
                 // TODO also slow monster?
                 break;
         }
     }
 
-    private void StartIncubation()
+    private void StartIncubation(float incubationDuration, float infectionDuration)
     {
         infectionProgress = 0;
         healthBar.DisplayIncubationBar(incubationDuration);
-        StartCoroutine(Incubating(incubationDuration));
+        StartCoroutine(Incubating(incubationDuration, infectionDuration));
     }
 
-    private IEnumerator Incubating(float duration)
+    private IEnumerator Incubating(float duration, float infectionDuration)
     {
         status = InfectionStatus.Incubating;
         float startTime = Time.time, endTime = startTime + duration;

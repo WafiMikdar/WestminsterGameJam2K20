@@ -90,7 +90,7 @@ public class DoctorController : MonoBehaviour
 
     private void OnAbilityTwo()
     {
-        sensorPlacer.TryPlaceSensor();
+        sensorPlacer.TryActivate();
         //sensorPlacer.TryActivate();
 
     }

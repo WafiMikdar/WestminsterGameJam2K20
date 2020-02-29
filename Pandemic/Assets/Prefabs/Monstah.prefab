@@ -51,6 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   infectionRange: 10
+  lethalInfectionCooldown: 0
 --- !u!114 &6314589998120943578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,6 +95,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   infecting: {fileID: 6314589998120943557}
+  noClip: {fileID: 0}
+  wallPlacer: {fileID: 0}
+  ultravision: {fileID: 0}
+  supplyDropAbility: {fileID: 0}
 --- !u!212 &6314589998120943576
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -141,7 +146,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &6314589998120943583
