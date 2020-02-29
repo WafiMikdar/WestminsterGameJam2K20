@@ -11,11 +11,15 @@ public class HumanHealth : MonoBehaviour, IInfectable, ICurable
 
     [SerializeField] private double infectionXPGain, cureXPLoss, cureXPGain;
 
+    [SerializeField] private ParticleSystem particles;
+
     private HealthBar healthBar;
 
     private Experience experienceTarget;
 
     private InfectionStatus status = InfectionStatus.Healthy;
+    public InfectionStatus Status => status;
+    public bool IsHealthy => status == InfectionStatus.Healthy || status == InfectionStatus.Cured;
 
     private void Awake()
     {
@@ -126,6 +130,16 @@ public class HumanHealth : MonoBehaviour, IInfectable, ICurable
 
     private void Die()
     {
+        particles.Play(true);
+        StartCoroutine(Destroying());
+        GetComponent<Renderer>().enabled = false;
+        GetComponent<Collider2D>().enabled = false;
+        enabled = false;
+    }
+
+    private IEnumerator Destroying()
+    {
+        yield return new WaitUntil(() => !particles.isPlaying);
         Destroy(gameObject);
     }
 }
