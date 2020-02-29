@@ -11,6 +11,7 @@ public class DoctorController : MonoBehaviour
     [SerializeField] private DoctorCuring curing;
     [SerializeField] private DoctorTrapPlacer trapPlacer;
     [SerializeField] private MotionSensorPlacer sensorPlacer;
+
     [SerializeField] private DoctorAdrenalinBoost dab;
 
     public float Speed { get => speed; set => speed = value; }
@@ -22,6 +23,11 @@ public class DoctorController : MonoBehaviour
     {
         spR = GetComponent<SpriteRenderer>();
     }
+
+    [SerializeField] private SupplyDropAbilitySlot supplyDropAbility;
+
+    public float Speed { get => speed; set => speed = value; }
+
 
     private void Move()
     {
@@ -88,6 +94,7 @@ public class DoctorController : MonoBehaviour
     private void OnAbilityTwo()
     {
         sensorPlacer.TryPlaceSensor();
+        //sensorPlacer.TryActivate();
 
     }
 
@@ -104,6 +111,7 @@ public class DoctorController : MonoBehaviour
     private void OnAbilityFive()
     {
         dab.adrenalinBoost();
+        supplyDropAbility.TryActivate();
     }
 
     private void FixedUpdate()

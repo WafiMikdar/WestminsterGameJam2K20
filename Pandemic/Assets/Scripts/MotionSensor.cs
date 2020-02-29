@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -37,7 +38,7 @@ public class MotionSensor : MonoBehaviour
             if (!hit.collider)
             {
                 indicator.SetIndicator(Mathf.Atan2(doctorTransform.position.y - monsterTransform.position.y, doctorTransform.position.x - monsterTransform.position.x) * Mathf.Rad2Deg - 90,
-                                       indicatorVariance, indicatorDuration, indicatorColor);
+                    indicatorVariance, indicatorDuration, indicatorColor);
                 notificationReadyTime = Time.time + notificationCooldown;
             }
         }
