@@ -3,19 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D))]
-public class MonsterNoClip : MonoBehaviour
+public class MonsterNoClip : UnlockableCooldownAbility
 {
-    [SerializeField] private float cooldown, duration;
-    private float readyTime;
+    [SerializeField] private float duration;
 
     [SerializeField] private string buildingLayerName;
 
+    private void Awake()
+    {
+        TryActivate();
+    }
+
     public void TryActivate()
     {
-        if (Time.time >= readyTime)
+        Unlock();
+        if (IsReady)
         {
-            readyTime = Time.time + cooldown;
             StartCoroutine(NoClipping());
+            ResetCooldown();
         }
     }
 

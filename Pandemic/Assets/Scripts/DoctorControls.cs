@@ -7,7 +7,7 @@ public class DoctorControls : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
     private Vector2 doctorVelocity;
-    [SerializeField] private DoctorAdrenalinBoost dab;
+    [SerializeField] private DoctorAdrenalineBoost dab;
 
     [SerializeField] private DoctorCuring curing;
     [SerializeField] private DoctorTrapPlacer trapPlacer;

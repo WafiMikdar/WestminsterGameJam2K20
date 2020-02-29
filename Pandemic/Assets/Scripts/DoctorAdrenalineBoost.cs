@@ -1,24 +1,22 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
-public class DoctorAdrenalinBoost : MonoBehaviour
+public class DoctorAdrenalineBoost : UnlockableCooldownAbility
 {
     [SerializeField] private DoctorController dc;
-    [SerializeField] private float speedAmp, seconds;
+    [SerializeField] private float speedAmp, duration, normalSpeed;
     [SerializeField] private DoctorSFX doctorSfx;
-    //[SerializeField] private DoctorSFX doctorSfx;
 
     public void AdrenalinBoost()
     {
-        if (dc.Speed == 5.0f)
+        if (IsReady && Math.Abs(dc.Speed - normalSpeed) < 0.01f)
         {
             dc.Speed = dc.Speed * speedAmp;
             doctorSfx.PlaySFX(doctorSfx.DoctorAdrenalinBoost);
-            StartCoroutine(BoostDuration(seconds));
+            StartCoroutine(BoostDuration(duration));
+            ResetCooldown();
         }
-
-        //doctorSfx.PlaySFX(doctorSfx.DoctorAdrenalinBoost);
-        StartCoroutine(BoostDuration(seconds));
     }
 
     private IEnumerator BoostDuration(float seconds)

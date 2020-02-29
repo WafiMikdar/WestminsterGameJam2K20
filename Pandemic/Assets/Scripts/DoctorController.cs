@@ -11,11 +11,11 @@ public class DoctorController : MonoBehaviour
     [SerializeField] private DoctorCuring curing;
     [SerializeField] private DoctorTrapPlacer trapPlacer;
     [SerializeField] private MotionSensorPlacer sensorPlacer;
-    [SerializeField] private DoctorAdrenalinBoost doctorAdrenalinBoost;
+    [SerializeField] private DoctorAdrenalineBoost _doctorAdrenalineBoost;
     [SerializeField] private DoctorNewsBroadcast doctorNewsBroadcast;
     [SerializeField] private SupplyDropAbilitySlot supplyDropAbility;
     [SerializeField] private DoctorSFX doctorSfx;
-    [SerializeField] private DoctorAdrenalinBoost dab;
+    [SerializeField] private DoctorAdrenalineBoost dab;
 
     public float Speed
     {

@@ -10,7 +10,7 @@ public class MonsterController : MonoBehaviour
 
     [SerializeField] private MonsterInfecting infecting;
     [SerializeField] private MonsterNoClip noClip;
-    [SerializeField] private MonsterWallPlacer wallPlacer;
+    [SerializeField] private MonsterLethalInfecting lethalInfecting;
     [SerializeField] private MonsterUltravision ultravision;
     [SerializeField] private SupplyDropAbilitySlot supplyDropAbility;
 
@@ -60,20 +60,15 @@ public class MonsterController : MonoBehaviour
 
     private void OnAbilityTwo()
     {
-        infecting.TryLethalInfect();
+        lethalInfecting.TryInfect();
     }
 
     private void OnAbilityThree()
     {
-        wallPlacer.TryPlaceWall();
-    }
-
-    private void OnAbilityFour()
-    {
         ultravision.TryActivate();
     }
 
-    private void OnAbilityFive()
+    private void OnAbilityFour()
     {
         supplyDropAbility.TryActivate();
     }
