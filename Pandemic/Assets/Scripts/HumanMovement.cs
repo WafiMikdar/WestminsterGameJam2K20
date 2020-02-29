@@ -6,7 +6,10 @@ using UnityEngine;
 public class HumanMovement : MonoBehaviour
 {
     [SerializeField] private float healthySpeed, infectedSpeed, detectionRange, slowDownFactor, stoppingSpeed;
+    [SerializeField] private HumanSFX humanSfx;
     private float sqrDetectionRange, sqrStoppingSpeed;
+
+    public bool IsMale { get; set; } //TODO call PlayScreamSfx func from humanSfx instance (if true male scream, else female)
 
     private HumanHealth health;
 
@@ -56,4 +59,6 @@ public class HumanMovement : MonoBehaviour
             rb.velocity *= slowDownFactor;
         }
     }
+
+
 }

@@ -11,9 +11,10 @@ public class DoctorController : MonoBehaviour
     [SerializeField] private DoctorCuring curing;
     [SerializeField] private DoctorTrapPlacer trapPlacer;
     [SerializeField] private MotionSensorPlacer sensorPlacer;
-    [SerializeField] private DoctorAdrenalinBoost dab;
-    [SerializeField] private DoctorNewsBroadcast dnb;
+    [SerializeField] private DoctorAdrenalinBoost doctorAdrenalinBoost;
+    [SerializeField] private DoctorNewsBroadcast doctorNewsBroadcast;
     [SerializeField] private SupplyDropAbilitySlot supplyDropAbility;
+    [SerializeField] private DoctorSFX doctorSfx;
 
     public float Speed { get => speed; set => speed = value; }
 
@@ -25,16 +26,19 @@ public class DoctorController : MonoBehaviour
         if (playerVelocity.y < movementVector2.y) { Debug.Log("down"); }
         if (playerVelocity.x < movementVector2.x) { Debug.Log("left"); }
         if (playerVelocity.x > movementVector2.x) { Debug.Log("right"); }
+        
     }
 
     private void OnMove(InputValue value)
     {
         playerVelocity = value.Get<Vector2>();
+        doctorSfx.PlaySFX(doctorSfx.DoctorRunning);
     }
 
     private void OnAttack()
     {
-        curing.TryCure();
+        curing.TryCure(); 
+        
     }
 
     private void OnAbilityOne()
@@ -44,7 +48,7 @@ public class DoctorController : MonoBehaviour
 
     private void OnAbilityTwo()
     {
-        //sensorPlacer.TryActivate();
+        sensorPlacer.TryActivate();
     }
 
     private void OnAbilityThree()
@@ -52,19 +56,15 @@ public class DoctorController : MonoBehaviour
         supplyDropAbility.TryActivate();
     }
 
-    private void OnAbilityThree()
-    {
-        Debug.Log("Ability Three");
-    }
-
     private void OnAbilityFour()
     {
-        dnb.CreateNewBroadcast();
+        doctorNewsBroadcast.CreateNewBroadcast();
     }
 
     private void OnAbilityFive()
     {
-        dab.AdrenalinBoost();
+        doctorAdrenalinBoost.AdrenalinBoost();
+
     }
 
     private void FixedUpdate()

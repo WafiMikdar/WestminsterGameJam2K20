@@ -7,6 +7,7 @@ using UnityEngine;
 public class MonsterInfecting : MonoBehaviour
 {
     [SerializeField] private float infectionRange, lethalInfectionCooldown;
+    [SerializeField] private MonsterSfx monsterSfx;
     private float lethalInfectionReadyTime;
 
     private Experience experience;
@@ -18,6 +19,7 @@ public class MonsterInfecting : MonoBehaviour
 
     public void TryInfect()
     {
+        monsterSfx.PlaySFX(monsterSfx.MonsterInject);
         Infect();
     }
 
@@ -25,6 +27,7 @@ public class MonsterInfecting : MonoBehaviour
     {
         if (Time.time >= lethalInfectionReadyTime)
         {
+            monsterSfx.PlaySFX(monsterSfx.MonsterLethalInjection);
             LethalInfect();
         }
     }

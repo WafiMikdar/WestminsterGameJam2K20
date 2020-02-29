@@ -6,6 +6,7 @@ using UnityEngine;
 public class DoctorCuring : MonoBehaviour
 {
     [SerializeField] private float cureRadius;
+    [SerializeField] private DoctorSFX doctorSfx;
 
     private Experience experience;
 
@@ -16,6 +17,7 @@ public class DoctorCuring : MonoBehaviour
 
     public void TryCure()
     {
+        doctorSfx.PlaySFX(doctorSfx.DoctorInject);
         Cure();
     }
 

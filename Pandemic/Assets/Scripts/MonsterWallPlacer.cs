@@ -5,6 +5,7 @@ using UnityEngine;
 public class MonsterWallPlacer : MonoBehaviour
 {
     [SerializeField] private float cooldown;
+    [SerializeField] private MonsterSfx monsterSfx;
     private float readyTime;
 
     [SerializeField] private LayerMask buildingLayer;
@@ -16,6 +17,7 @@ public class MonsterWallPlacer : MonoBehaviour
         if (Time.time >= readyTime)
         {
             readyTime = Time.time + cooldown;
+            monsterSfx.PlaySFX(monsterSfx.MonsterSpiderWebSound);
             PlaceWall();
         }
     }

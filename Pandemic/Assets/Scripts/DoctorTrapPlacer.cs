@@ -6,6 +6,7 @@ using UnityEngine;
 public class DoctorTrapPlacer : MonoBehaviour
 {
     [SerializeField] private float cooldown;
+    [SerializeField] private DoctorSFX doctorSfx;
     private float availableTime;
 
     [SerializeField] private GameObject trap;
@@ -14,6 +15,7 @@ public class DoctorTrapPlacer : MonoBehaviour
     {
         if (CanPlaceTrap())
         {
+            doctorSfx.PlaySFX(doctorSfx.DoctorTrapSetUp);
             PlaceTrap();
         }
     }
