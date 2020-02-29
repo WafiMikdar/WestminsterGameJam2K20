@@ -11,8 +11,10 @@ public class DoctorController : MonoBehaviour
     [SerializeField] private DoctorCuring curing;
     [SerializeField] private DoctorTrapPlacer trapPlacer;
     [SerializeField] private MotionSensorPlacer sensorPlacer;
+    [SerializeField] private SupplyDropAbilitySlot supplyDropAbility;
+
     public float Speed { get => speed; set => speed = value; }
-            
+
     private void Move()
     {
         Vector2 movementVector2 = new Vector2(playerVelocity.x, playerVelocity.y) * speed * Time.deltaTime;
@@ -36,7 +38,12 @@ public class DoctorController : MonoBehaviour
 
     private void OnAbilityTwo()
     {
-        sensorPlacer.TryPlaceSensor();
+        //sensorPlacer.TryActivate();
+    }
+
+    private void OnAbilityThree()
+    {
+        supplyDropAbility.TryActivate();
     }
 
     private void FixedUpdate()

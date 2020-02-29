@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MonsterEcholocation : MonoBehaviour
+public class MonsterEcholocation : SupplyDropAbility
 {
     [SerializeField] private RadialBarIndicator indicator;
 
@@ -12,18 +12,18 @@ public class MonsterEcholocation : MonoBehaviour
 
     [SerializeField] private Transform doctorTransform;
 
-    private uint usesLeft = 3;
+    [SerializeField] private uint totalUses = 3;
 
-    public void TryActivate()
+    public override void TryActivate()
     {
-        if (usesLeft > 0)
+        if (totalUses > 0)
         {
             Activate();
-            usesLeft--;
+            totalUses--;
         }
     }
 
-    private void Activate()
+    public override void Activate()
     {
         indicator.SetIndicator(Mathf.Atan2(transform.position.y - doctorTransform.position.y, transform.position.x - doctorTransform.position.x) * Mathf.Rad2Deg - 90,
                                indicatorVariance, indicatorDuration, indicatorColor);

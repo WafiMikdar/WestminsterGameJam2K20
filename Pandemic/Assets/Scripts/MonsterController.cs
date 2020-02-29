@@ -12,7 +12,7 @@ public class MonsterController : MonoBehaviour
     [SerializeField] private MonsterNoClip noClip;
     [SerializeField] private MonsterWallPlacer wallPlacer;
     [SerializeField] private MonsterUltravision ultravision;
-    [SerializeField] private MonsterEcholocation echolocation;
+    [SerializeField] private SupplyDropAbilitySlot supplyDropAbility;
 
     public float Speed { get => speed; set => speed = value; }
 
@@ -54,7 +54,7 @@ public class MonsterController : MonoBehaviour
 
     private void OnAbilityFive()
     {
-        echolocation.TryActivate();
+        supplyDropAbility.TryActivate();
     }
 
     private void FixedUpdate()
