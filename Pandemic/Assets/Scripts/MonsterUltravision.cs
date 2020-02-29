@@ -5,6 +5,7 @@ using UnityEngine;
 public class MonsterUltravision : MonoBehaviour
 {
     [SerializeField] private float cooldown, duration;
+    [SerializeField] private MonsterSfx monsterSfx;
     private float readyTime;
 
     [SerializeField] private Camera monsterCamera;
@@ -22,6 +23,7 @@ public class MonsterUltravision : MonoBehaviour
         if (Time.time >= readyTime)
         {
             Activate();
+            monsterSfx.PlaySFX(monsterSfx.MonsterUltraVision);
             readyTime = Time.time + cooldown;
         }
     }

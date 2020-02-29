@@ -5,6 +5,7 @@ using UnityEngine;
 public class MonsterEcholocation : SupplyDropAbility
 {
     [SerializeField] private RadialBarIndicator indicator;
+    [SerializeField] private MonsterSfx monsterSfx;
 
     [SerializeField] private float indicatorVariance, indicatorDuration;
 
@@ -18,6 +19,7 @@ public class MonsterEcholocation : SupplyDropAbility
     {
         if (totalUses > 0)
         {
+            monsterSfx.PlaySFX(monsterSfx.MonsterEcholocation);
             Activate();
             totalUses--;
         }

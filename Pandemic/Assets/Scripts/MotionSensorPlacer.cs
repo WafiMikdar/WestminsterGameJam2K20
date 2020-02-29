@@ -8,6 +8,8 @@ public class MotionSensorPlacer : SupplyDropAbility
 
     [SerializeField] private RadialBarIndicator directionalIndicator;
 
+    [SerializeField] private DoctorSFX doctorSfx;
+
     [SerializeField] private uint totalUses = 3;
 
     public override void TryActivate()
@@ -23,6 +25,7 @@ public class MotionSensorPlacer : SupplyDropAbility
         MotionSensor sensor = Instantiate(sensorPrefab, transform.position, Quaternion.identity).GetComponent<MotionSensor>();
         sensor.Setup(transform, directionalIndicator);
         totalUses--;
+        doctorSfx.PlaySFX(doctorSfx.DoctorMotionSensorSetup);
     }
 
     public override void Activate()

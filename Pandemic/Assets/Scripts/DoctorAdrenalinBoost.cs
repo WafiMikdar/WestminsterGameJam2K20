@@ -1,29 +1,26 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class DoctorAdrenalinBoost : MonoBehaviour
 {
-    private DoctorControls dc;
-    private float speedAmp = 2;
-    private int count = 0;
+    [SerializeField] private DoctorController dc;
+    [SerializeField] private float speedAmp, seconds;
+    [SerializeField] private DoctorSFX doctorSfx;
 
-
-    public void adrenalinBoost(ref float speed)
+    public void AdrenalinBoost()
     {
-        dc.Speed = dc.Speed * speedAmp;
-        StartCoroutine(boostDuration(5));
+        if (dc.Speed == 5.0f)
+        {
+            dc.Speed = dc.Speed * speedAmp;
+            doctorSfx.PlaySFX(doctorSfx.DoctorAdrenalinBoost);
+            StartCoroutine(BoostDuration(seconds));
+        }
+       
     }
 
-    IEnumerator boostDuration(float seconds)
+    IEnumerator BoostDuration(float seconds)
     {
         yield return new WaitForSeconds(seconds);
-        revertSpeed();
-    }
-
-    void revertSpeed()
-    {
         dc.Speed = dc.Speed / speedAmp;
     }
 }
