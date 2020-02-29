@@ -13,6 +13,7 @@ public class DoctorController : MonoBehaviour
     [SerializeField] private MotionSensorPlacer sensorPlacer;
     [SerializeField] private DoctorAdrenalinBoost dab;
     [SerializeField] private DoctorNewsBroadcast dnb;
+    [SerializeField] private SupplyDropAbilitySlot supplyDropAbility;
 
     public float Speed { get => speed; set => speed = value; }
 
@@ -43,7 +44,12 @@ public class DoctorController : MonoBehaviour
 
     private void OnAbilityTwo()
     {
-        sensorPlacer.TryPlaceSensor();
+        //sensorPlacer.TryActivate();
+    }
+
+    private void OnAbilityThree()
+    {
+        supplyDropAbility.TryActivate();
     }
 
     private void OnAbilityThree()

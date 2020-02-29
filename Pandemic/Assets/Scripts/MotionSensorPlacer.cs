@@ -2,15 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MotionSensorPlacer : MonoBehaviour
+public class MotionSensorPlacer : SupplyDropAbility
 {
     [SerializeField] private GameObject sensorPrefab;
 
-    private uint remainingSensors = 3;
+    [SerializeField] private RadialBarIndicator directionalIndicator;
 
-    public void TryPlaceSensor()
+    [SerializeField] private uint totalUses = 3;
+
+    public override void TryActivate()
     {
-        if (remainingSensors > 0)
+        if (totalUses > 0)
         {
             PlaceSensor();
         }
@@ -19,7 +21,12 @@ public class MotionSensorPlacer : MonoBehaviour
     private void PlaceSensor()
     {
         MotionSensor sensor = Instantiate(sensorPrefab, transform.position, Quaternion.identity).GetComponent<MotionSensor>();
-        sensor.Setup(transform, GetComponent<RadialBarIndicator>());
-        remainingSensors--;
+        sensor.Setup(transform, directionalIndicator);
+        totalUses--;
+    }
+
+    public override void Activate()
+    {
+        PlaceSensor();
     }
 }
