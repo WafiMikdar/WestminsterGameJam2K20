@@ -8,6 +8,8 @@ public class DoctorCuring : MonoBehaviour
     [SerializeField] private float cureRadius;
     [SerializeField] private DoctorSFX doctorSfx;
 
+    [SerializeField] private ParticleSystem particles;
+
     private Experience experience;
 
     private void Awake()
@@ -23,6 +25,7 @@ public class DoctorCuring : MonoBehaviour
 
     private void Cure()
     {
+        particles.Play(true);
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, cureRadius);
 
         foreach (Collider2D hit in hits)

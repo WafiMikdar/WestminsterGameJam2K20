@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Pandemic/Assets/Animations.meta
 guid: 19adbcf71ce5c3d4996d8859f90dfadb
+=======
+guid: 4f5e1319442550a48ace54ed94583f45
+>>>>>>> assets:Pandemic/Assets/Sprites/rob-sprites.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

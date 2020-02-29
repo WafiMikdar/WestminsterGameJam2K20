@@ -10,6 +10,8 @@ public class MonsterInfecting : MonoBehaviour
     [SerializeField] private MonsterSfx monsterSfx;
     private float lethalInfectionReadyTime;
 
+    [SerializeField] private ParticleSystem infectionParticles, lethalInfectionParticles;
+
     private Experience experience;
 
     private void Awake()
@@ -34,18 +36,13 @@ public class MonsterInfecting : MonoBehaviour
 
     private void LethalInfect()
     {
+        lethalInfectionParticles.Play(true);
         ForEachNearbyInfectable(infectable => infectable.Infect(experience, 0));
     }
 
     private void Infect()
     {
-        //Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, infectionRange);
-
-        //foreach (Collider2D hit in hits)
-        //{
-        //    hit.GetComponent<IInfectable>()?.Infect(experience);
-        //}
-
+        infectionParticles.Play(true);
         ForEachNearbyInfectable(infectable => infectable.Infect(experience));
     }
 
