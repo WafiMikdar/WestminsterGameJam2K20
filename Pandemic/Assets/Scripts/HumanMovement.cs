@@ -27,6 +27,11 @@ public class HumanMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!monsterTransform)
+        {
+            return;
+        }
+
         Vector2 diff = transform.position - monsterTransform.position;
         isFleeing = Vector2.SqrMagnitude(diff) <= sqrDetectionRange;
 
