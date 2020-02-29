@@ -12,25 +12,8 @@ public class DoctorAdrenalinBoost : MonoBehaviour
 
     public void adrenalinBoost()
     {
-        //speed = count < 1 ? count > 1 ? speed * speedAmp : StartCoroutine(boostDuration(5)): speed;
-        
-        /*if (count == 0)
-        {
-            count++;
-            return speed * speedAmp;
-        }
-
-        if (count == 1)
-        {
-            count = 0;
-            return speed / speedAmp;
-        }
-
-        return speed;*/
         dc.Speed = dc.Speed * speedAmp;
-        StartCoroutine(boostDuration(5));
-
-
+        StartCoroutine(boostDuration(5));           
     }
 
     IEnumerator boostDuration(float seconds)

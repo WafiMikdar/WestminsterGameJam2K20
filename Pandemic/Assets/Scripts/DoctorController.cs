@@ -15,6 +15,7 @@ public class DoctorController : MonoBehaviour
     [SerializeField] private DoctorAdrenalinBoost dab;
 
     public float Speed { get => speed; set => speed = value; }
+
     public Animator anim;
     private SpriteRenderer spR;
     public float vel;
@@ -93,29 +94,31 @@ public class DoctorController : MonoBehaviour
     private void OnAbilityOne()
     {
         trapPlacer.TryPlaceTrap();
+        anim.Play("Cure");
     }
 
     private void OnAbilityTwo()
     {
-        sensorPlacer.TryActivate();
+        dab.adrenalinBoost();
+        anim.Play("Inject");
     }
 
     private void OnAbilityThree()
     {
-        Debug.Log("Ability Three");
-        anim.Play("Inject");
+
+        sensorPlacer.TryActivate();
+        anim.Play("Cure");
     }
   
     private void OnAbilityFour()
     {
-        Debug.Log("Ability Four");
+        supplyDropAbility.TryActivate();
     }
 
     private void OnAbilityFive()
     {
-        dab.adrenalinBoost();
-        supplyDropAbility.TryActivate();
-    }
+
+    } //Not in Use
 
     public void canMove()
     {
@@ -128,9 +131,9 @@ public class DoctorController : MonoBehaviour
 
     private void FixedUpdate()
     {
-    if (ableToMove)
-    {
-        Move();
-    }
+        if (ableToMove)
+        {
+            Move();
+        }
     }
 }
