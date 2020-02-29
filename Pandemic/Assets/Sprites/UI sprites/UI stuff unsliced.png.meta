@@ -155,6 +155,30 @@ TextureImporter:
   - first:
       213: -2534310753778614762
     second: UI stuff unsliced_6
+  - first:
+      213: 8678657176574067319
+    second: UI stuff unsliced_0
+  - first:
+      213: 6308106475799959331
+    second: UI stuff unsliced_1
+  - first:
+      213: -8877801344544319197
+    second: UI stuff unsliced_2
+  - first:
+      213: -5864021008557082037
+    second: UI stuff unsliced_3
+  - first:
+      213: -5698754976961451263
+    second: UI stuff unsliced_4
+  - first:
+      213: -6272571587056899362
+    second: UI stuff unsliced_5
+  - first:
+      213: -6204179886501134836
+    second: UI stuff unsliced_6
+  - first:
+      213: 5605290214173620586
+    second: UI stuff unsliced_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -259,14 +283,14 @@ TextureImporter:
         width: 202
         height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e6582e6b33b698c0800000000000000
-      internalID: -3992806951784786204
+      spriteID: 772871978b8c07870800000000000000
+      internalID: 8678657176574067319
       vertices: []
       indices: 
       edges: []
@@ -280,14 +304,14 @@ TextureImporter:
         width: 202
         height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 770f715e2652cc5d0800000000000000
-      internalID: -3041014541701353353
+      spriteID: 327d56ffa65ea8750800000000000000
+      internalID: 6308106475799959331
       vertices: []
       indices: 
       edges: []
@@ -301,14 +325,14 @@ TextureImporter:
         width: 504
         height: 190
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45a439432c9f7f990800000000000000
-      internalID: -7352133254158005676
+      spriteID: 32953f7b6b6bbc480800000000000000
+      internalID: -8877801344544319197
       vertices: []
       indices: 
       edges: []
@@ -322,14 +346,14 @@ TextureImporter:
         width: 302
         height: 103
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2afe4184240254370800000000000000
-      internalID: 8306080556804009890
+      spriteID: b4af68d26ffce9ea0800000000000000
+      internalID: -5864021008557082037
       vertices: []
       indices: 
       edges: []
@@ -339,18 +363,39 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 495
-        y: 397
-        width: 9
-        height: 8
+        y: 96
+        width: 305
+        height: 308
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae20be9d601d7ce00800000000000000
-      internalID: 1065049664252478186
+      spriteID: 10b2930ba84f9e0b0800000000000000
+      internalID: -5698754976961451263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI stuff unsliced_7
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 279
+        width: 765
+        height: 173
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a69bace60cdf9cd40800000000000000
+      internalID: 5605290214173620586
       vertices: []
       indices: 
       edges: []
@@ -359,10 +404,10 @@ TextureImporter:
       name: UI stuff unsliced_5
       rect:
         serializedVersion: 2
-        x: 496
-        y: 96
-        width: 304
-        height: 308
+        x: 850
+        y: 124
+        width: 764
+        height: 106
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -372,27 +417,6 @@ TextureImporter:
       bones: []
       spriteID: 81fa54d0915b48550800000000000000
       internalID: 6162249309351161624
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI stuff unsliced_6
-      rect:
-        serializedVersion: 2
-        x: 495
-        y: 98
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 61eb29afbc154dcd0800000000000000
-      internalID: -2534310753778614762
       vertices: []
       indices: 
       edges: []
