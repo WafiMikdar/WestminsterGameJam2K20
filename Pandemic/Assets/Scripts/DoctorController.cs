@@ -27,15 +27,7 @@ public class DoctorController : MonoBehaviour
     }
 
     [SerializeField] private SupplyDropAbilitySlot supplyDropAbility;
-    public void StopMovement(int active)
-    {
-
-        if (active == 1)
-            transform.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
-        if (active == 0)
-            transform.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-
-    }
+   
     private void Move()
     {
         Vector2 movementVector2 = new Vector2(playerVelocity.x, playerVelocity.y) * speed * Time.deltaTime;
@@ -99,7 +91,7 @@ public class DoctorController : MonoBehaviour
 
     private void OnAbilityTwo()
     {
-        dab.adrenalinBoost();
+        dab.AdrenalinBoost();
         anim.Play("Inject");
     }
 

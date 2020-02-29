@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6279473665008069775}
   - component: {fileID: 94412117952708082}
   - component: {fileID: 2242925292660555375}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: DeathParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4806,7 +4806,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
