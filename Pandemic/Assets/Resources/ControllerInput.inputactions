@@ -60,6 +60,14 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "Press"
+                },
+                {
+                    "name": "PauseMenu",
+                    "type": "Button",
+                    "id": "fc6127fb-ae4f-44e7-b0d3-f80ac8a01a42",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press"
                 }
             ],
             "bindings": [
@@ -381,6 +389,17 @@
                     "action": "AbilityFive",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "39f8af9e-1d39-4fab-8f66-4fde223d8699",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "arrowKeyboard;wasdKeyboard;Controller",
+                    "action": "PauseMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -584,6 +603,14 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "Press"
+                },
+                {
+                    "name": "PauseMenu",
+                    "type": "Button",
+                    "id": "c1d8a57f-0a28-45fa-8960-786b41e4ebc5",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press"
                 }
             ],
             "bindings": [
@@ -707,6 +734,17 @@
                     "action": "AbilityFive",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dd20a329-ae65-4cbc-8a14-137e6fc3e150",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "arrowKeyboard;wasdKeyboard",
+                    "action": "PauseMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -766,6 +804,14 @@
                     "name": "AbilityThree",
                     "type": "Button",
                     "id": "463af400-e0ef-4655-98bc-81e8cb70e108",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press"
+                },
+                {
+                    "name": "PauseMenu",
+                    "type": "Button",
+                    "id": "cb3e5937-64d7-4673-b13a-f3a871c166f7",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "Press"
@@ -890,6 +936,17 @@
                     "processors": "",
                     "groups": "wasdKeyboard",
                     "action": "AbilityFive",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "08ae301d-cdee-45dd-9bf5-d38ecba86b67",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "wasdKeyboard;arrowKeyboard",
+                    "action": "PauseMenu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
