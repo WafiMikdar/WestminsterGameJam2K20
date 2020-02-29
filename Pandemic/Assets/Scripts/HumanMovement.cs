@@ -51,13 +51,14 @@ public class HumanMovement : MonoBehaviour
         {
             SlowDown();
         }
+        vel = Mathf.Abs(Mathf.Sqrt(Mathf.Pow(rb.velocity.x, 2) + Mathf.Pow(rb.velocity.y, 2)));
+        anim.SetFloat("Vel", vel);
     }
 
     private void Move(Vector2 dir)
     {
         rb.velocity = dir * (health.IsHealthy ? healthySpeed : infectedSpeed);
-
-
+        
         if (rb.velocity.x < 0)
         {
             spR.flipX = true;
@@ -66,10 +67,6 @@ public class HumanMovement : MonoBehaviour
         {
             spR.flipX = false;
         }
-
-        vel = Mathf.Sqrt(Mathf.Pow(rb.velocity.x, 2) + Mathf.Pow(rb.velocity.y, 2));
-
-        anim.SetFloat("Vel", vel);
     }
 
     private void SlowDown()
