@@ -530,7 +530,15 @@
             "id": "cc44a678-d946-43fd-82f8-27a86366fd29",
             "actions": [
                 {
-                    "name": "AbilityTwo",
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "4ceffb38-f49c-4417-9317-4ce076ca76f6",
+                    "expectedControlType": "Stick",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Attack",
                     "type": "Button",
                     "id": "9ea83658-949b-4d44-8d6c-03c008e0f7d1",
                     "expectedControlType": "",
@@ -546,7 +554,7 @@
                     "interactions": "Press"
                 },
                 {
-                    "name": "Attack",
+                    "name": "AbilityTwo",
                     "type": "Button",
                     "id": "be1c2929-f083-4f34-a219-800fc0d6565c",
                     "expectedControlType": "",
@@ -554,15 +562,7 @@
                     "interactions": "Press"
                 },
                 {
-                    "name": "Move",
-                    "type": "Value",
-                    "id": "4ceffb38-f49c-4417-9317-4ce076ca76f6",
-                    "expectedControlType": "Stick",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "AbilityFive",
+                    "name": "AbilityThree",
                     "type": "Button",
                     "id": "b93a6e81-8218-4e62-a92a-11eb89247a85",
                     "expectedControlType": "",
@@ -578,7 +578,7 @@
                     "interactions": "Press"
                 },
                 {
-                    "name": "AbilityThree",
+                    "name": "AbilityFive",
                     "type": "Button",
                     "id": "4ef5b999-3744-43cf-95ae-5ca5126e43da",
                     "expectedControlType": "",
@@ -587,6 +587,28 @@
                 }
             ],
             "bindings": [
+                {
+                    "name": "",
+                    "id": "ec287d3f-79fd-40be-adf2-a602e0825852",
+                    "path": "<Keyboard>/k",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "arrowKeyboard",
+                    "action": "AbilityTwo",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d306a9fc-3031-463d-bb24-d99038e34f44",
+                    "path": "<Keyboard>/numpad6",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "arrowKeyboard",
+                    "action": "AbilityFive",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
                 {
                     "name": "ArrowKeys",
                     "id": "3e2444fb-2946-4534-9b62-94d40230f4d2",
@@ -644,19 +666,8 @@
                 },
                 {
                     "name": "",
-                    "id": "c22aa1ea-c974-4cd2-818a-85bd4f8c7731",
-                    "path": "<Keyboard>/numpad1",
-                    "interactions": "Press",
-                    "processors": "",
-                    "groups": "arrowKeyboard",
-                    "action": "Attack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "35c6e87b-3112-47f9-8af7-0b5109d5d8a9",
-                    "path": "<Keyboard>/k",
+                    "path": "<Keyboard>/j",
                     "interactions": "Press",
                     "processors": "",
                     "groups": "arrowKeyboard",
@@ -666,19 +677,19 @@
                 },
                 {
                     "name": "",
-                    "id": "ec287d3f-79fd-40be-adf2-a602e0825852",
-                    "path": "<Keyboard>/numpad3",
+                    "id": "c22aa1ea-c974-4cd2-818a-85bd4f8c7731",
+                    "path": "<Keyboard>/i",
                     "interactions": "Press",
                     "processors": "",
                     "groups": "arrowKeyboard",
-                    "action": "AbilityTwo",
+                    "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
                     "id": "23e79d8d-afe1-438d-a6b5-628ef137bc79",
-                    "path": "<Keyboard>/numpad4",
+                    "path": "<Keyboard>/l",
                     "interactions": "",
                     "processors": "",
                     "groups": "arrowKeyboard",
@@ -689,22 +700,11 @@
                 {
                     "name": "",
                     "id": "3182ac5d-eaa9-4558-89a9-d0e26a43240b",
-                    "path": "<Keyboard>/numpad5",
+                    "path": "<Keyboard>/semicolon",
                     "interactions": "Press",
                     "processors": "",
                     "groups": "arrowKeyboard",
                     "action": "AbilityFour",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "d306a9fc-3031-463d-bb24-d99038e34f44",
-                    "path": "<Keyboard>/numpad6",
-                    "interactions": "Press",
-                    "processors": "",
-                    "groups": "arrowKeyboard",
-                    "action": "AbilityFive",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

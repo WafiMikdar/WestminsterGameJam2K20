@@ -19,16 +19,26 @@ public class DoctorController : MonoBehaviour
     private SpriteRenderer spR;
     public float vel;
     public float animSwitch;
+    private bool ableToMove = true;
     private void Start()
     {
         spR = GetComponent<SpriteRenderer>();
     }
 
     [SerializeField] private SupplyDropAbilitySlot supplyDropAbility;
+    public void StopMovement(int active)
+    {
 
+        if (active == 1)
+            transform.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+        if (active == 0)
+            transform.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+
+    }
     private void Move()
     {
         Vector2 movementVector2 = new Vector2(playerVelocity.x, playerVelocity.y) * speed * Time.deltaTime;
+
         transform.Translate(movementVector2);
 
         if (playerVelocity.x < 0)
@@ -77,29 +87,25 @@ public class DoctorController : MonoBehaviour
     private void OnAttack()
     {
         curing.TryCure();
-        anim.Play("Run");
+        anim.Play("Cure");
     }
 
     private void OnAbilityOne()
     {
         trapPlacer.TryPlaceTrap();
-        anim.SetBool("animSwitch", true);
-        anim.Play("Cure");
-        anim.SetBool("animSwitch", false);
     }
 
     private void OnAbilityTwo()
     {
         sensorPlacer.TryActivate();
-        //sensorPlacer.TryActivate();
-
     }
 
     private void OnAbilityThree()
     {
         Debug.Log("Ability Three");
+        anim.Play("Inject");
     }
-
+  
     private void OnAbilityFour()
     {
         Debug.Log("Ability Four");
@@ -111,8 +117,20 @@ public class DoctorController : MonoBehaviour
         supplyDropAbility.TryActivate();
     }
 
+    public void canMove()
+    {
+        ableToMove = true;
+    }
+    public void notMove()
+    {
+        ableToMove = false;
+    }
+
     private void FixedUpdate()
     {
+    if (ableToMove)
+    {
         Move();
+    }
     }
 }
