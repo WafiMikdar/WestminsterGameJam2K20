@@ -102,4 +102,4 @@ MonoBehaviour:
   indicatorColor: {r: 0.33374867, g: 0.9433962, b: 0.8720193, a: 0}
   buildingLayer:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 256

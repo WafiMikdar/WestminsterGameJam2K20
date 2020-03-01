@@ -21,11 +21,28 @@ public class DoctorAirStrike : SupplyDropAbility
 
     [SerializeField] private uint usesLeft = 1;
 
+    private Dictionary<SpriteRenderer, float> spawnedRenderers = new Dictionary<SpriteRenderer, float>();
+
     private Experience experience;
 
     private void Awake()
     {
+        //Activate();
         experience = GetComponent<Experience>();
+    }
+
+    private void RemoveThis()
+    {
+        for (int i = 0; i < spawnedRenderers.Count; i++)
+        {
+            if (Time.time > spawnedRenderers.ElementAt(i).Value + 5)
+            {
+                if (spawnedRenderers.ElementAt(i).Key != null)
+                {
+                    Destroy(spawnedRenderers.ElementAt(i).Key.gameObject);
+                }
+            }
+        }
     }
 
     public override void TryActivate()
@@ -42,6 +59,9 @@ public class DoctorAirStrike : SupplyDropAbility
         Vector2 intersection = GetNearestTileIntersection();
         SpriteRenderer horizontalRend = Instantiate(indicator, intersection, Quaternion.Euler(0, 0, 0)).GetComponent<SpriteRenderer>();
         SpriteRenderer verticalRend = Instantiate(indicator, intersection, Quaternion.identity).GetComponent<SpriteRenderer>();
+
+        spawnedRenderers.Add(horizontalRend, Time.time); spawnedRenderers.Add(verticalRend, Time.time);
+        Invoke("RemoveThis", 5);
 
         horizontalParticles.transform.position = intersection;
         verticalParticles.transform.position = intersection;
@@ -65,7 +85,7 @@ public class DoctorAirStrike : SupplyDropAbility
             verticalRend.color = new Color(verticalRend.color.r, verticalRend.color.g, verticalRend.color.b, alpha);
             yield return null;
         }
-        
+
         StartCoroutine(WarningZone(horizontalRend, verticalRend));
     }
 
