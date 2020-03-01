@@ -9,7 +9,7 @@ public class DoctorAirStrike : SupplyDropAbility
 {
     [SerializeField] private GameObject indicator;
 
-    [Serializable] private DoctorSFX doctorSfx;
+    [SerializeField] private DoctorSFX doctorSfx;
 
     [SerializeField] private Sprite dangerSprite;
 
