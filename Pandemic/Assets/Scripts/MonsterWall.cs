@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer), typeof(Collider2D))]
 public class MonsterWall : MonoBehaviour
 {
-    [SerializeField] private float solidificationAlpha, solidificationDuration;
+    [SerializeField] private float solidificationAlpha, solidificationDuration, duration = 5f;
 
     private SpriteRenderer rend;
 
@@ -28,5 +28,12 @@ public class MonsterWall : MonoBehaviour
 
         rend.color = new Color(rend.color.r, rend.color.g, rend.color.b, startA);
         coll.enabled = true;
+
+        Invoke("Remove", duration);
+    }
+
+    private void Remove()
+    {
+        Destroy(gameObject);
     }
 }

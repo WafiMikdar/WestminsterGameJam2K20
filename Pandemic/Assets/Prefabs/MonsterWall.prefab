@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6644663289988294400}
   - component: {fileID: 6644663289988294403}
   - component: {fileID: 6644663289988294402}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MonsterWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,5 +121,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd786eebc5a982a42bbf9199316e6d36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  solidificationAlpha: 0.5
-  solidificationDuration: 2
+  solidificationAlpha: 0.35
+  solidificationDuration: 1.5
+  duration: 5

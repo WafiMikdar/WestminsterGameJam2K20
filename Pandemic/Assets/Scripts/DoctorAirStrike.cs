@@ -24,7 +24,6 @@ public class DoctorAirStrike : SupplyDropAbility
     private void Awake()
     {
         experience = GetComponent<Experience>();
-        Activate();
     }
 
     public override void TryActivate()

@@ -39,7 +39,7 @@ public class MonsterNoClip : UnlockableCooldownAbility
 
     private void ShuntOutOfBuildings(int buildingLayer)
     {
-        float range = 1;
+        float range = 0;
         while (true)
         {
             for (int i = 0; i < 4; i++)

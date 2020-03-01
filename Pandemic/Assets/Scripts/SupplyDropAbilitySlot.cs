@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SupplyDropAbilitySlot : MonoBehaviour
 {
     [SerializeField] private bool isDoctor;
+
+    [SerializeField] private Image imageMask;
 
     private SupplyDropAbility currentAbility;
 
@@ -12,16 +15,19 @@ public class SupplyDropAbilitySlot : MonoBehaviour
     {
         currentAbility?.Remove();
         currentAbility = newAbility;
+        imageMask.fillAmount = 1;
     }
 
     public void TryActivate()
     {
         currentAbility?.TryActivate();
+        imageMask.fillAmount = 0;
     }
 
     public void Activate()
     {
-        currentAbility?.TryActivate();
+        currentAbility?.Activate();
+        imageMask.fillAmount = 0;
     }
 
     private void OnCollisionStay2D(Collision2D other)
