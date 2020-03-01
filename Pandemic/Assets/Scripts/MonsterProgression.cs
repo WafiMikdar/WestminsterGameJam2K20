@@ -5,11 +5,14 @@ using UnityEngine;
 [RequireComponent(typeof(Experience))]
 public class MonsterProgression : MonoBehaviour
 {
+    [SerializeField] private FadingNotification notifier;
+
+    [SerializeField] private string lethalInfectingUnlockNotification = "Lethal infecting unlocked, press Q to quickly kill people nearby";
+    [SerializeField] private string ultravisionUnlockNotification = "Ultravision unlocked, press E to see nearby traps and sensors";
+
     public Animator anim;
 
-    // Why, oh god why would you ever make these?!
-    public bool level1 = true;
-
+    public bool level1 = true; // Why, oh god why would you ever need to make these?!
     public bool level2 = false;
     public bool level3 = false;
 
@@ -27,6 +30,7 @@ public class MonsterProgression : MonoBehaviour
         {
             case 1:
                 GetComponent<MonsterLethalInfecting>().Unlock();
+                notifier.CreateNotification(lethalInfectingUnlockNotification);
                 Debug.Log("Level 2");
                 anim.SetBool("level2", true);
                 anim.SetBool("level1", false);
@@ -34,6 +38,7 @@ public class MonsterProgression : MonoBehaviour
 
             case 2:
                 GetComponent<MonsterUltravision>().Unlock();
+                notifier.CreateNotification(ultravisionUnlockNotification);
                 Debug.Log("Level 3");
                 anim.SetBool("level3", true);
                 anim.SetBool("level2", false);

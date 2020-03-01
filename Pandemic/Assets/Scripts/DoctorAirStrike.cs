@@ -36,8 +36,8 @@ public class DoctorAirStrike : SupplyDropAbility
         SpriteRenderer horizontalRend = Instantiate(indicator, intersection, Quaternion.Euler(0, 0, 0)).GetComponent<SpriteRenderer>();
         SpriteRenderer verticalRend = Instantiate(indicator, intersection, Quaternion.identity).GetComponent<SpriteRenderer>();
 
-        //horizontalParticles.transform.position = intersection;
-        //verticalParticles.transform.position = intersection;
+        horizontalParticles.transform.position = intersection;
+        verticalParticles.transform.position = intersection;
         horizontalRend.size = size;
         verticalRend.size = new Vector2(size.y, size.x);
 
@@ -54,7 +54,6 @@ public class DoctorAirStrike : SupplyDropAbility
         while (endTime > Time.time)
         {
             float alpha = GetIndicatorAlpha(startTime);
-            Debug.Log($"Alpha: {alpha}");
             horizontalRend.color = new Color(horizontalRend.color.r, horizontalRend.color.g, horizontalRend.color.b, alpha);
             verticalRend.color = new Color(verticalRend.color.r, verticalRend.color.g, verticalRend.color.b, alpha);
             yield return null;

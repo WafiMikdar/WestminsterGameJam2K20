@@ -2299,6 +2299,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32aabdbbb3208c94fb49ec68e91f7180, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  notifier: {fileID: 0}
+  adrenalineUnlockNotification: "Adrenaline boost unlocked, press \xC5 for a temporary
+    speed-up"
+  sensorUnlockNotification: "Motion sensors unlocked, press \xD8 to place a motion
+    sensor"
 --- !u!114 &1410318001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3439,6 +3444,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7d4087f63f2f954a9a649fad4c9ce42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  notifier: {fileID: 0}
+  lethalInfectingUnlockNotification: Lethal infecting unlocked, press Q to quickly
+    kill people nearby
+  ultravisionUnlockNotification: Ultravision unlocked, press E to see nearby traps
+    and sensors
   anim: {fileID: 0}
   level1: 1
   level2: 0
