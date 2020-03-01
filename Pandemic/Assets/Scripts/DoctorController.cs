@@ -11,28 +11,54 @@ public class DoctorController : MonoBehaviour
     [SerializeField] private DoctorCuring curing;
     [SerializeField] private DoctorTrapPlacer trapPlacer;
     [SerializeField] private MotionSensorPlacer sensorPlacer;
+    [SerializeField] private DoctorAdrenalineBoost _doctorAdrenalineBoost;
+    [SerializeField] private DoctorNewsBroadcast doctorNewsBroadcast;
+    [SerializeField] private SupplyDropAbilitySlot supplyDropAbility;
+    [SerializeField] private DoctorSFX doctorSfx;
+    [SerializeField] private DoctorAdrenalineBoost dab;
 
-    [SerializeField] private DoctorAdrenalinBoost dab;
-
-    public float Speed { get => speed; set => speed = value; }
+    public float Speed
+    {
+        get => speed;
+        set => speed = value;
+    }
 
     public Animator anim;
     private SpriteRenderer spR;
     public float vel;
     public float animSwitch;
     private bool ableToMove = true;
+
     private void Start()
     {
         spR = GetComponent<SpriteRenderer>();
     }
 
-    [SerializeField] private SupplyDropAbilitySlot supplyDropAbility;
-   
     private void Move()
     {
         Vector2 movementVector2 = new Vector2(playerVelocity.x, playerVelocity.y) * speed * Time.deltaTime;
 
         transform.Translate(movementVector2);
+
+        if (playerVelocity.y > movementVector2.y)
+        {
+            Debug.Log("up");
+        }
+
+        if (playerVelocity.y < movementVector2.y)
+        {
+            Debug.Log("down");
+        }
+
+        if (playerVelocity.x < movementVector2.x)
+        {
+            Debug.Log("left");
+        }
+
+        if (playerVelocity.x > movementVector2.x)
+        {
+            Debug.Log("right");
+        }
 
         if (playerVelocity.x < 0)
         {
@@ -75,6 +101,7 @@ public class DoctorController : MonoBehaviour
     private void OnMove(InputValue value)
     {
         playerVelocity = value.Get<Vector2>();
+        doctorSfx.PlaySFX(doctorSfx.DoctorRunning);
     }
 
     private void OnAttack()
@@ -97,25 +124,19 @@ public class DoctorController : MonoBehaviour
 
     private void OnAbilityThree()
     {
-
         sensorPlacer.TryActivate();
-        anim.Play("Cure");
     }
-  
+
     private void OnAbilityFour()
     {
         supplyDropAbility.TryActivate();
     }
 
-    private void OnAbilityFive()
-    {
-
-    } //Not in Use
-
     public void canMove()
     {
         ableToMove = true;
     }
+
     public void notMove()
     {
         ableToMove = false;

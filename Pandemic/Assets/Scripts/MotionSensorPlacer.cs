@@ -2,19 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MotionSensorPlacer : SupplyDropAbility
+public class MotionSensorPlacer : UnlockableCooldownAbility
 {
     [SerializeField] private GameObject sensorPrefab;
 
     [SerializeField] private RadialBarIndicator directionalIndicator;
 
-    [SerializeField] private uint totalUses = 3;
+    [SerializeField] private DoctorSFX doctorSfx;
 
-    public override void TryActivate()
+    public void TryActivate()
     {
-        if (totalUses > 0)
+        if (IsReady)
         {
             PlaceSensor();
+            ResetCooldown();
         }
     }
 
@@ -22,11 +23,6 @@ public class MotionSensorPlacer : SupplyDropAbility
     {
         MotionSensor sensor = Instantiate(sensorPrefab, transform.position, Quaternion.identity).GetComponent<MotionSensor>();
         sensor.Setup(transform, directionalIndicator);
-        totalUses--;
-    }
-
-    public override void Activate()
-    {
-        PlaceSensor();
+        doctorSfx.PlaySFX(doctorSfx.DoctorMotionSensorSetup);
     }
 }

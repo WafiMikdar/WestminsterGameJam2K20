@@ -3,31 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(RadialBarIndicator))]
-public class DoctorTrapPlacer : MonoBehaviour
+public class DoctorTrapPlacer : UnlockableCooldownAbility
 {
-    [SerializeField] private float cooldown;
-    private float availableTime;
+    [SerializeField] private DoctorSFX doctorSfx;
 
     [SerializeField] private GameObject trap;
 
     public void TryPlaceTrap()
     {
-        if (CanPlaceTrap())
+        if (IsReady)
         {
+            doctorSfx.PlaySFX(doctorSfx.DoctorTrapSetUp);
             PlaceTrap();
+            ResetCooldown();
         }
-    }
-
-    private bool CanPlaceTrap()
-    {
-        return Time.time >= availableTime;
     }
 
     private void PlaceTrap()
     {
         DoctorTrap newTrap = Instantiate(trap, transform.position, Quaternion.identity).GetComponent<DoctorTrap>();
         newTrap.Setup(transform, GetComponent<RadialBarIndicator>());
-
-        availableTime = Time.time + cooldown;
     }
 }

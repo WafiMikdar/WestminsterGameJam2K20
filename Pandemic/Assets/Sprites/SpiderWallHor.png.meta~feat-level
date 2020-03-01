@@ -1,0 +1,292 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Pandemic/Assets/Sprites/SpiderWallHor.png.meta
+<<<<<<< HEAD:Pandemic/Assets/Sprites/SpiderWallHor.png.meta
+guid: 346fef05e530cd148bd365f6325e1c16
+=======
+guid: df7f09c781039374f9772131eec977e3
+>>>>>>> assets:Pandemic/Assets/Sprites/rob-sprites/rob-idle.png.meta
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5869226014979853144
+    second: SpiderWallHor_0
+  - first:
+      213: 6571100941014722258
+    second: SpiderWallHor_1
+  - first:
+      213: -2639449703195520619
+    second: SpiderWallHor_2
+  - first:
+      213: 5301274758143789911
+    second: SpiderWallHor_3
+=======
+guid: c48103720de1dc64387f7910f512d3b8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6048059544517194162
+    second: doc-call 1_0
+  - first:
+      213: -6034403935900990831
+    second: doc-call 1_1
+  - first:
+      213: 6434275761365638868
+    second: doc-call 1_2
+  - first:
+      213: -6456092805434370477
+    second: doc-call 1_3
+  - first:
+      213: 312850369056099588
+    second: doc-call 1_4
+>>>>>>> assets:Pandemic/Assets/Sprites/doc sprites/doc-call 1.png.meta
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+<<<<<<< HEAD:Pandemic/Assets/Sprites/SpiderWallHor.png.meta
+      name: SpiderWallHor_0
+=======
+      name: doc-call 1_0
+>>>>>>> assets:Pandemic/Assets/Sprites/doc sprites/doc-call 1.png.meta
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+<<<<<<< HEAD:Pandemic/Assets/Sprites/SpiderWallHor.png.meta
+      spriteID: 8a4f4ae29025c8ea0800000000000000
+      internalID: -5869226014979853144
+=======
+      spriteID: e4e44a463e9f01ca0800000000000000
+      internalID: -6048059544517194162
+>>>>>>> assets:Pandemic/Assets/Sprites/doc sprites/doc-call 1.png.meta
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+<<<<<<< HEAD:Pandemic/Assets/Sprites/SpiderWallHor.png.meta
+      name: SpiderWallHor_1
+=======
+      name: doc-call 1_1
+>>>>>>> assets:Pandemic/Assets/Sprites/doc sprites/doc-call 1.png.meta
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+<<<<<<< HEAD:Pandemic/Assets/Sprites/SpiderWallHor.png.meta
+      spriteID: 2d6ea6c9d7d313b50800000000000000
+      internalID: 6571100941014722258
+=======
+      spriteID: 1920769879d714ca0800000000000000
+      internalID: -6034403935900990831
+>>>>>>> assets:Pandemic/Assets/Sprites/doc sprites/doc-call 1.png.meta
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+<<<<<<< HEAD:Pandemic/Assets/Sprites/SpiderWallHor.png.meta
+      name: SpiderWallHor_2
+      rect:
+        serializedVersion: 2
+        x: 0
+=======
+      name: doc-call 1_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 96
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4deda17f6b32b4950800000000000000
+      internalID: 6434275761365638868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doc-call 1_3
+      rect:
+        serializedVersion: 2
+        x: 288
+>>>>>>> assets:Pandemic/Assets/Sprites/doc sprites/doc-call 1.png.meta
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+<<<<<<< HEAD:Pandemic/Assets/Sprites/SpiderWallHor.png.meta
+      spriteID: 5915586ba7ace5bd0800000000000000
+      internalID: -2639449703195520619
+=======
+      spriteID: 356112f9cc95766a0800000000000000
+      internalID: -6456092805434370477
+>>>>>>> assets:Pandemic/Assets/Sprites/doc sprites/doc-call 1.png.meta
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+<<<<<<< HEAD:Pandemic/Assets/Sprites/SpiderWallHor.png.meta
+      name: SpiderWallHor_3
+=======
+      name: doc-call 1_4
+>>>>>>> assets:Pandemic/Assets/Sprites/doc sprites/doc-call 1.png.meta
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+<<<<<<< HEAD:Pandemic/Assets/Sprites/SpiderWallHor.png.meta
+      spriteID: 75bc7ef1e49e19940800000000000000
+      internalID: 5301274758143789911
+=======
+      spriteID: 40d407bc0c7775400800000000000000
+      internalID: 312850369056099588
+>>>>>>> assets:Pandemic/Assets/Sprites/doc sprites/doc-call 1.png.meta
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+<<<<<<< HEAD:Pandemic/Assets/Sprites/SpiderWallHor.png.meta
+<<<<<<< HEAD:Pandemic/Assets/Sprites/SpiderWallHor.png.meta
+    spriteID: f5a6c1cab4f73c0419e9ae8bc0bc1a6c
+=======
+    spriteID: b1177fc6851091b49b30e2a1336f6098
+>>>>>>> assets:Pandemic/Assets/Sprites/rob-sprites/rob-idle.png.meta
+=======
+    spriteID: 2b74a1a6e0f6f9140bb1a6a75bbd46ed
+>>>>>>> assets:Pandemic/Assets/Sprites/doc sprites/doc-call 1.png.meta
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -4,14 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Experience))]
-public class MonsterInfecting : MonoBehaviour
+public class MonsterInfecting : UnlockableCooldownAbility
 {
-    [SerializeField] private float infectionRange, lethalInfectionCooldown;
-    private float lethalInfectionReadyTime;
+    [SerializeField] private float infectionRange;
+    [SerializeField] private MonsterSfx monsterSfx;
 
-    [SerializeField] private ParticleSystem infectionParticles, lethalInfectionParticles;
+    [SerializeField] protected ParticleSystem infectionParticles;
 
-    private Experience experience;
+    protected Experience experience;
 
     private void Awake()
     {
@@ -20,30 +20,21 @@ public class MonsterInfecting : MonoBehaviour
 
     public void TryInfect()
     {
-        Infect();
-    }
-
-    public void TryLethalInfect()
-    {
-        if (Time.time >= lethalInfectionReadyTime)
+        if (IsReady)
         {
-            LethalInfect();
+            monsterSfx.PlaySFX(monsterSfx.MonsterInject);
+            Infect();
+            ResetCooldown();
         }
     }
 
-    private void LethalInfect()
-    {
-        lethalInfectionParticles.Play(true);
-        ForEachNearbyInfectable(infectable => infectable.Infect(experience, 0));
-    }
-
-    private void Infect()
+    protected virtual void Infect()
     {
         infectionParticles.Play(true);
         ForEachNearbyInfectable(infectable => infectable.Infect(experience));
     }
 
-    private void ForEachNearbyInfectable(Action<IInfectable> func)
+    protected void ForEachNearbyInfectable(Action<IInfectable> func)
     {
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, infectionRange);
 

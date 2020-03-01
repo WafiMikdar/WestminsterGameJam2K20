@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MonsterUltravision : MonoBehaviour
+public class MonsterUltravision : UnlockableCooldownAbility
 {
-    [SerializeField] private float cooldown, duration;
-    private float readyTime;
+    [SerializeField] private float duration;
+    [SerializeField] private MonsterSfx monsterSfx;
 
     [SerializeField] private Camera monsterCamera;
 
@@ -19,10 +19,11 @@ public class MonsterUltravision : MonoBehaviour
 
     public void TryActivate()
     {
-        if (Time.time >= readyTime)
+        if (IsReady)
         {
             Activate();
-            readyTime = Time.time + cooldown;
+            monsterSfx.PlaySFX(monsterSfx.MonsterUltraVision);
+            ResetCooldown();
         }
     }
 

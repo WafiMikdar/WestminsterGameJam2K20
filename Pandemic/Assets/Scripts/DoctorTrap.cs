@@ -6,6 +6,7 @@ using UnityEngine;
 public class DoctorTrap : MonoBehaviour
 {
     [SerializeField] private float activationDistance, debuffDuration, indicatorVariance, indicatorDuration;
+    [SerializeField] private MonsterSfx monsterSfx;
     private float sqrActivationDistance, monsterSpeedBackup;
 
     [SerializeField] private Color indicatorColor;
@@ -41,6 +42,7 @@ public class DoctorTrap : MonoBehaviour
         activated = true;
         MonsterController monsterMovement = monsterTransform.GetComponent<MonsterController>();
         monsterSpeedBackup = monsterMovement.Speed;
+        monsterSfx.PlaySFX(monsterSfx.MonsterTrappedInTrap);
         monsterMovement.Speed = 0;
         StartCoroutine(ResettingMonsterSpeed(monsterMovement));
         indicator.SetIndicator(Mathf.Atan2(doctorTransform.position.y - monsterTransform.position.y, doctorTransform.position.x - monsterTransform.position.x) * Mathf.Rad2Deg - 90,
