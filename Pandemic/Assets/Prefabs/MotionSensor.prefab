@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8420153788966475293}
   - component: {fileID: 8420153788966475290}
   - component: {fileID: -614247933802398328}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: MotionSensor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
