@@ -13,8 +13,10 @@ public class DoctorController : MonoBehaviour
     [SerializeField] private MotionSensorPlacer sensorPlacer;
     [SerializeField] private DoctorAdrenalineBoost dab;
     [SerializeField] private DoctorNewsBroadcast doctorNewsBroadcast;
-    [SerializeField] private SupplyDropAbilitySlot supplyDropAbility;
+    [SerializeField] private SupplyDropAbilitySlotter supplyDropAbility;
     [SerializeField] private DoctorSFX doctorSfx;
+
+    private float lastDisableMovementTime;
 
     public float Speed
     {
@@ -115,10 +117,16 @@ public class DoctorController : MonoBehaviour
     public void notMove()
     {
         ableToMove = false;
+        lastDisableMovementTime = Time.time;
     }
 
     private void FixedUpdate()
     {
+        if (Time.time > lastDisableMovementTime + 0.5f)
+        {
+            ableToMove = true;
+        }
+
         if (ableToMove)
         {
             Move();

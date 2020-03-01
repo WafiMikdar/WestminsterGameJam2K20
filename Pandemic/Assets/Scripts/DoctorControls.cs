@@ -12,7 +12,7 @@ public class DoctorControls : MonoBehaviour
     [SerializeField] private DoctorCuring curing;
     [SerializeField] private DoctorTrapPlacer trapPlacer;
     [SerializeField] private MotionSensorPlacer sensorPlacer;
-    [SerializeField] private SupplyDropAbilitySlot supplyDropAbility;
+    [SerializeField] private SupplyDropAbilitySlotter supplyDropAbility;
 
     public float Speed { get => speed; set => speed = value; }
     public Animator anim;

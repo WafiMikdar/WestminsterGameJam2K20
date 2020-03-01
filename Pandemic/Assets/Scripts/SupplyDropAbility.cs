@@ -2,10 +2,10 @@
 
 public abstract class SupplyDropAbility : MonoBehaviour
 {
-    public void AttachTo(SupplyDropAbilitySlot newSlot)
+    public void AttachTo(SupplyDropAbilitySlotter newSlotter)
     {
-        SupplyDropAbility newAbility = Instantiate(gameObject, newSlot.transform.position, Quaternion.identity, newSlot.transform).GetComponent<SupplyDropAbility>();
-        newSlot.ReplaceCurrentAbility(newAbility);
+        SupplyDropAbility newAbility = Instantiate(gameObject, newSlotter.transform.position, Quaternion.identity, newSlotter.transform).GetComponent<SupplyDropAbility>();
+        newSlotter.ReplaceCurrentAbility(newAbility);
         //return newAbility;
     }
 

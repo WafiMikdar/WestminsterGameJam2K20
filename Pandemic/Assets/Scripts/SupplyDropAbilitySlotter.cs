@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SupplyDropAbilitySlot : MonoBehaviour
+public class SupplyDropAbilitySlotter : MonoBehaviour
 {
     [SerializeField] private bool isDoctor;
 
     [SerializeField] private Image imageMask;
+
+    [SerializeField] private FadingNotification notifier;
 
     private SupplyDropAbility currentAbility;
 
@@ -16,9 +18,28 @@ public class SupplyDropAbilitySlot : MonoBehaviour
         currentAbility?.Remove();
         currentAbility = newAbility;
         imageMask.fillAmount = 1;
+
+        switch (newAbility)
+        {
+            case MonsterWallPlacer ability:
+                notifier.CreateNotification("Got web wall, press X to place a wall between nearest buildings");
+                break;
+
+            case DoctorAirStrike ability:
+                notifier.CreateNotification("Got air strike, press ; to air drop curing rain");
+                break;
+
+            case MonsterEcholocation ability:
+                notifier.CreateNotification("Got echolocation, press X to see which direction the doctor is");
+                break;
+
+            case DoctorNewsBroadcast ability:
+                notifier.CreateNotification("Got news broadcast, press ; to see a preview of where the monster is");
+                break;
+        }
     }
 
-    public void TryActivate()
+    public virtual void TryActivate()
     {
         currentAbility?.TryActivate();
         imageMask.fillAmount = 0;
