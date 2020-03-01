@@ -13,11 +13,13 @@ public class DoctorProgression : MonoBehaviour
         switch (newLevel)
         {
             case 1:
-                Debug.Log("Doctor level 1");
+                GetComponent<DoctorAdrenalineBoost>().Unlock();
+                Debug.Log("Doctor level 2");
                 break;
 
             case 2:
-                Debug.Log("Doctor level 2");
+                GetComponent<MotionSensorPlacer>().Unlock();
+                Debug.Log("Doctor level 3");
                 break;
         }
     }

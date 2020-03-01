@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent(typeof(Collider2D))]
 public class MonsterNoClip : UnlockableCooldownAbility
 {
     [SerializeField] private float duration;
@@ -11,12 +11,11 @@ public class MonsterNoClip : UnlockableCooldownAbility
 
     private void Awake()
     {
-        TryActivate();
+        Unlock();
     }
 
     public void TryActivate()
     {
-        Unlock();
         if (IsReady)
         {
             StartCoroutine(NoClipping());

@@ -13,9 +13,10 @@ public class MonsterInfecting : UnlockableCooldownAbility
 
     protected Experience experience;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         experience = GetComponent<Experience>();
+        Unlock();
     }
 
     public void TryInfect()

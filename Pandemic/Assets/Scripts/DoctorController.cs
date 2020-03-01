@@ -11,7 +11,7 @@ public class DoctorController : MonoBehaviour
     [SerializeField] private DoctorCuring curing;
     [SerializeField] private DoctorTrapPlacer trapPlacer;
     [SerializeField] private MotionSensorPlacer sensorPlacer;
-    [SerializeField] private DoctorAdrenalineBoost _doctorAdrenalineBoost;
+    [SerializeField] private DoctorAdrenalineBoost dab;
     [SerializeField] private DoctorNewsBroadcast doctorNewsBroadcast;
     [SerializeField] private SupplyDropAbilitySlot supplyDropAbility;
     [SerializeField] private DoctorSFX doctorSfx;
@@ -130,12 +130,12 @@ public class DoctorController : MonoBehaviour
 
     private void OnAbilityThree()
     {
-        doctorAdrenalinBoost.AdrenalinBoost();
+        sensorPlacer.TryActivate();
     }
 
     private void OnAbilityFour()
     {
-        sensorPlacer.TryActivate();
+        supplyDropAbility.TryActivate();
     }
 
     public void canMove()

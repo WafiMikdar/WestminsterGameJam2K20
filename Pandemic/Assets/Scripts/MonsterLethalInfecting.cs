@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class MonsterLethalInfecting : MonsterInfecting
 {
+    protected override void Awake()
+    {
+        experience = GetComponent<Experience>();
+    }
+
     protected override void Infect()
     {
         infectionParticles.Play(true);

@@ -5,8 +5,15 @@ using UnityEngine;
 public class DoctorAdrenalineBoost : UnlockableCooldownAbility
 {
     [SerializeField] private DoctorController dc;
-    [SerializeField] private float speedAmp, duration, normalSpeed;
     [SerializeField] private DoctorSFX doctorSfx;
+
+    [SerializeField] private float speedAmp, duration;
+    private float normalSpeed;
+
+    private void Awake()
+    {
+        normalSpeed = dc.Speed;
+    }
 
     public void AdrenalinBoost()
     {

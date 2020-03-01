@@ -9,6 +9,11 @@ public class DoctorTrapPlacer : UnlockableCooldownAbility
 
     [SerializeField] private GameObject trap;
 
+    private void Awake()
+    {
+        Unlock();
+    }
+
     public void TryPlaceTrap()
     {
         if (IsReady)

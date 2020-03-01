@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Experience))]
-public class DoctorCuring : MonoBehaviour
+public class DoctorCuring : UnlockableCooldownAbility
 {
     [SerializeField] private float cureRadius;
     [SerializeField] private DoctorSFX doctorSfx;
@@ -15,12 +15,17 @@ public class DoctorCuring : MonoBehaviour
     private void Awake()
     {
         experience = GetComponent<Experience>();
+        Unlock();
     }
 
     public void TryCure()
     {
-        doctorSfx.PlaySFX(doctorSfx.DoctorInject);
-        Cure();
+        if (IsReady)
+        {
+            doctorSfx.PlaySFX(doctorSfx.DoctorInject);
+            Cure();
+            ResetCooldown();
+        }
     }
 
     private void Cure()

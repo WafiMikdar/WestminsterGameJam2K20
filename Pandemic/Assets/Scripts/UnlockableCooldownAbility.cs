@@ -16,6 +16,7 @@ public abstract class UnlockableCooldownAbility : MonoBehaviour
     {
         padlock.gameObject.SetActive(false);
         litImage.fillAmount = 1;
+        readyTime = Time.time;
     }
 
     public void ResetCooldown()
