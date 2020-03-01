@@ -11,6 +11,8 @@ public class DoctorTrapPlacer : UnlockableCooldownAbility
 
     private Animator anim;
 
+
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -24,6 +26,7 @@ public class DoctorTrapPlacer : UnlockableCooldownAbility
             doctorSfx.PlaySFX(doctorSfx.DoctorTrapSetUp);
             PlaceTrap();
             ResetCooldown();
+            
             anim.Play("Cure");
         }
     }
