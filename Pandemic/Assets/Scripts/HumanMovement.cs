@@ -52,6 +52,7 @@ public class HumanMovement : MonoBehaviour
         }
         else
         {
+            humanSFX.PlayScreamSfx();
             SlowDown();
         }
         vel = Mathf.Abs(Mathf.Sqrt(Mathf.Pow(rb.velocity.x, 2) + Mathf.Pow(rb.velocity.y, 2)));

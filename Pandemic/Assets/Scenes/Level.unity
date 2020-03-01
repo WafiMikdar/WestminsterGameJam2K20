@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &17416511 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5039557082670646532, guid: 58ec0f3c4a95ffc4f8711ab530b27bb5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1553711114}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &159211421 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6314589998120943556, guid: 39f76ea0192aaf040affc1bc8e5d9308,
@@ -340,6 +346,8 @@ GameObject:
   m_Component:
   - component: {fileID: 621925260}
   - component: {fileID: 621925259}
+  - component: {fileID: 621925261}
+  - component: {fileID: 621925262}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -422,6 +430,110 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!82 &621925261
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621925258}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: c17a934732dd7354d9b54e5a57fed9ce, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!81 &621925262
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621925258}
+  m_Enabled: 1
 --- !u!1001 &885478797
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19189,6 +19301,76 @@ PrefabInstance:
       propertyPath: monsterCamera
       value: 
       objectReference: {fileID: 2052642895}
+    - target: {fileID: 5466742936174941023, guid: 39f76ea0192aaf040affc1bc8e5d9308,
+        type: 3}
+      propertyPath: MonsterEcholocation.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5466742936174941023, guid: 39f76ea0192aaf040affc1bc8e5d9308,
+        type: 3}
+      propertyPath: MonsterEvolution.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5466742936174941023, guid: 39f76ea0192aaf040affc1bc8e5d9308,
+        type: 3}
+      propertyPath: MonsterInject.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5466742936174941023, guid: 39f76ea0192aaf040affc1bc8e5d9308,
+        type: 3}
+      propertyPath: MonsterLethalInjection.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5466742936174941023, guid: 39f76ea0192aaf040affc1bc8e5d9308,
+        type: 3}
+      propertyPath: MonsterSpiderWebSound.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5466742936174941023, guid: 39f76ea0192aaf040affc1bc8e5d9308,
+        type: 3}
+      propertyPath: MonsterTrappedInTrap.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5466742936174941023, guid: 39f76ea0192aaf040affc1bc8e5d9308,
+        type: 3}
+      propertyPath: MonsterUltraVision.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5466742936174941023, guid: 39f76ea0192aaf040affc1bc8e5d9308,
+        type: 3}
+      propertyPath: MonsterEcholocation.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 88dc0ab8fff196b4d9af30e960ce2aea, type: 3}
+    - target: {fileID: 5466742936174941023, guid: 39f76ea0192aaf040affc1bc8e5d9308,
+        type: 3}
+      propertyPath: MonsterEvolution.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: d268ede7dc9124e4c9060b4a56f9090b, type: 3}
+    - target: {fileID: 5466742936174941023, guid: 39f76ea0192aaf040affc1bc8e5d9308,
+        type: 3}
+      propertyPath: MonsterInject.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 62a97004c5a48864890c54c011e4553c, type: 3}
+    - target: {fileID: 5466742936174941023, guid: 39f76ea0192aaf040affc1bc8e5d9308,
+        type: 3}
+      propertyPath: MonsterLethalInjection.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0dd6c96c5475e024fae69aa658e7fd65, type: 3}
+    - target: {fileID: 5466742936174941023, guid: 39f76ea0192aaf040affc1bc8e5d9308,
+        type: 3}
+      propertyPath: MonsterSpiderWebSound.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 778c48aef87d29e498bb3ac76c4235fd, type: 3}
+    - target: {fileID: 5466742936174941023, guid: 39f76ea0192aaf040affc1bc8e5d9308,
+        type: 3}
+      propertyPath: MonsterTrappedInTrap.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: f86d2e5b04ab1674fb921ced8be70668, type: 3}
+    - target: {fileID: 5466742936174941023, guid: 39f76ea0192aaf040affc1bc8e5d9308,
+        type: 3}
+      propertyPath: MonsterUltraVision.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: df89081e91609b842994c826c021703b, type: 3}
     - target: {fileID: 6314589998120943556, guid: 39f76ea0192aaf040affc1bc8e5d9308,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -38762,6 +38944,95 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1553711114
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5039557082268757822, guid: 58ec0f3c4a95ffc4f8711ab530b27bb5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039557082670646532, guid: 58ec0f3c4a95ffc4f8711ab530b27bb5,
+        type: 3}
+      propertyPath: m_Name
+      value: NewsBroadcasterCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039557082670646532, guid: 58ec0f3c4a95ffc4f8711ab530b27bb5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039557082670646533, guid: 58ec0f3c4a95ffc4f8711ab530b27bb5,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 159211421}
+    - target: {fileID: 5039557082670646536, guid: 58ec0f3c4a95ffc4f8711ab530b27bb5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039557082670646536, guid: 58ec0f3c4a95ffc4f8711ab530b27bb5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039557082670646536, guid: 58ec0f3c4a95ffc4f8711ab530b27bb5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -98.22852
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039557082670646536, guid: 58ec0f3c4a95ffc4f8711ab530b27bb5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039557082670646536, guid: 58ec0f3c4a95ffc4f8711ab530b27bb5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039557082670646536, guid: 58ec0f3c4a95ffc4f8711ab530b27bb5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039557082670646536, guid: 58ec0f3c4a95ffc4f8711ab530b27bb5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039557082670646536, guid: 58ec0f3c4a95ffc4f8711ab530b27bb5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039557082670646536, guid: 58ec0f3c4a95ffc4f8711ab530b27bb5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039557082670646536, guid: 58ec0f3c4a95ffc4f8711ab530b27bb5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039557082670646536, guid: 58ec0f3c4a95ffc4f8711ab530b27bb5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039557082670646537, guid: 58ec0f3c4a95ffc4f8711ab530b27bb5,
+        type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 58ec0f3c4a95ffc4f8711ab530b27bb5, type: 3}
 --- !u!1 &1745784000
 GameObject:
   m_ObjectHideFlags: 0
@@ -78332,6 +78603,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 231280663160439984, guid: 40b5e057dea2a734896a1b2f47718cad,
+        type: 3}
+      propertyPath: cameraGameObject
+      value: 
+      objectReference: {fileID: 17416511}
     - target: {fileID: 1894400261602109155, guid: 40b5e057dea2a734896a1b2f47718cad,
         type: 3}
       propertyPath: padlock
@@ -78352,6 +78628,96 @@ PrefabInstance:
       propertyPath: litImage
       value: 
       objectReference: {fileID: 1547769409}
+    - target: {fileID: 1894400261602109169, guid: 40b5e057dea2a734896a1b2f47718cad,
+        type: 3}
+      propertyPath: DoctorAdrenalinBoost.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894400261602109169, guid: 40b5e057dea2a734896a1b2f47718cad,
+        type: 3}
+      propertyPath: DoctorHelicopterBroadcaster.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894400261602109169, guid: 40b5e057dea2a734896a1b2f47718cad,
+        type: 3}
+      propertyPath: DoctorInject.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894400261602109169, guid: 40b5e057dea2a734896a1b2f47718cad,
+        type: 3}
+      propertyPath: DoctorMotionSensorSetup.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894400261602109169, guid: 40b5e057dea2a734896a1b2f47718cad,
+        type: 3}
+      propertyPath: DoctorPlaceObject.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894400261602109169, guid: 40b5e057dea2a734896a1b2f47718cad,
+        type: 3}
+      propertyPath: DoctorPlaneCaptainTalkWithRadioEnd.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894400261602109169, guid: 40b5e057dea2a734896a1b2f47718cad,
+        type: 3}
+      propertyPath: DoctorPlaneSound.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894400261602109169, guid: 40b5e057dea2a734896a1b2f47718cad,
+        type: 3}
+      propertyPath: DoctorRunning.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894400261602109169, guid: 40b5e057dea2a734896a1b2f47718cad,
+        type: 3}
+      propertyPath: DoctorTrapSetUp.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894400261602109169, guid: 40b5e057dea2a734896a1b2f47718cad,
+        type: 3}
+      propertyPath: DoctorAdrenalinBoost.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 67b2bd0f935892c4c972311099259816, type: 3}
+    - target: {fileID: 1894400261602109169, guid: 40b5e057dea2a734896a1b2f47718cad,
+        type: 3}
+      propertyPath: DoctorHelicopterBroadcaster.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 285d171bcdf6a0c4f9dc1313900ef8c7, type: 3}
+    - target: {fileID: 1894400261602109169, guid: 40b5e057dea2a734896a1b2f47718cad,
+        type: 3}
+      propertyPath: DoctorInject.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4e73841aa902bbb45a76a5e99dc96e8f, type: 3}
+    - target: {fileID: 1894400261602109169, guid: 40b5e057dea2a734896a1b2f47718cad,
+        type: 3}
+      propertyPath: DoctorMotionSensorSetup.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: de8b83b454fea5945aed442f9bcfe820, type: 3}
+    - target: {fileID: 1894400261602109169, guid: 40b5e057dea2a734896a1b2f47718cad,
+        type: 3}
+      propertyPath: DoctorPlaceObject.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 35167fc4fbd33bf4c80623897cb54c7e, type: 3}
+    - target: {fileID: 1894400261602109169, guid: 40b5e057dea2a734896a1b2f47718cad,
+        type: 3}
+      propertyPath: DoctorPlaneCaptainTalkWithRadioEnd.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 405d4148a04dfe942a835e372f215b52, type: 3}
+    - target: {fileID: 1894400261602109169, guid: 40b5e057dea2a734896a1b2f47718cad,
+        type: 3}
+      propertyPath: DoctorPlaneSound.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c59eab1b9a8b6cc4d84f43cbd4bb8e69, type: 3}
+    - target: {fileID: 1894400261602109169, guid: 40b5e057dea2a734896a1b2f47718cad,
+        type: 3}
+      propertyPath: DoctorRunning.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ebeef36fe0284d49a4edfa6f73c1b5b, type: 3}
+    - target: {fileID: 1894400261602109169, guid: 40b5e057dea2a734896a1b2f47718cad,
+        type: 3}
+      propertyPath: DoctorTrapSetUp.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: fdcd7fe15a0c33d4f954c45d397ea1c3, type: 3}
     - target: {fileID: 1894400261602109177, guid: 40b5e057dea2a734896a1b2f47718cad,
         type: 3}
       propertyPath: m_Name
