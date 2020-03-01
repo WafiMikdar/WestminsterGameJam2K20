@@ -16,6 +16,8 @@ public class DoctorController : MonoBehaviour
     [SerializeField] private SupplyDropAbilitySlot supplyDropAbility;
     [SerializeField] private DoctorSFX doctorSfx;
 
+    private float lastDisableMovementTime;
+
     public float Speed
     {
         get => speed;
@@ -115,10 +117,16 @@ public class DoctorController : MonoBehaviour
     public void notMove()
     {
         ableToMove = false;
+        lastDisableMovementTime = Time.time;
     }
 
     private void FixedUpdate()
     {
+        if (Time.time > lastDisableMovementTime + 0.5f)
+        {
+            ableToMove = true;
+        }
+
         if (ableToMove)
         {
             Move();

@@ -19558,6 +19558,11 @@ PrefabInstance:
       propertyPath: imageMask
       value: 
       objectReference: {fileID: 656051716}
+    - target: {fileID: 7179759299215484563, guid: 39f76ea0192aaf040affc1bc8e5d9308,
+        type: 3}
+      propertyPath: notifier
+      value: 
+      objectReference: {fileID: 505400667}
     - target: {fileID: 7233381907409629984, guid: 39f76ea0192aaf040affc1bc8e5d9308,
         type: 3}
       propertyPath: padlock
@@ -90252,6 +90257,11 @@ PrefabInstance:
       propertyPath: imageMask
       value: 
       objectReference: {fileID: 1077465512}
+    - target: {fileID: 8576716833048141917, guid: 40b5e057dea2a734896a1b2f47718cad,
+        type: 3}
+      propertyPath: notifier
+      value: 
+      objectReference: {fileID: 1313518224}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40b5e057dea2a734896a1b2f47718cad, type: 3}
 --- !u!95 &8618041717220794872 stripped

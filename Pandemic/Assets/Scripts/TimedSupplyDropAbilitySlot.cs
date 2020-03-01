@@ -5,12 +5,19 @@ using UnityEngine;
 public class TimedSupplyDropAbilitySlot : SupplyDropAbilitySlot
 {
     [SerializeField] private float supplyDropWaitTime;
+    private float supplyDropPickUpReadyTime;
 
     protected override void PickUpSupplyDrop(SupplyDrop drop)
     {
-        if (Time.time >= drop.SpawnTime + supplyDropWaitTime)
+        if (Time.time >= drop.SpawnTime + supplyDropWaitTime && Time.time >= supplyDropPickUpReadyTime)
         {
             base.PickUpSupplyDrop(drop);
         }
+    }
+
+    public override void TryActivate()
+    {
+        supplyDropPickUpReadyTime = Time.time + supplyDropWaitTime;
+        base.TryActivate();
     }
 }
