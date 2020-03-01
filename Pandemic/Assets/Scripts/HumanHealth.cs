@@ -12,7 +12,7 @@ public class HumanHealth : MonoBehaviour, IInfectable, ICurable
     [SerializeField] private double infectionXPGain, cureXPLoss, cureXPGain;
 
     [SerializeField] private ParticleSystem particles;
-
+    [SerializeField] private SpriteRenderer spR;
     private HealthBar healthBar;
 
     private Experience experienceTarget;
@@ -24,6 +24,7 @@ public class HumanHealth : MonoBehaviour, IInfectable, ICurable
     private void Awake()
     {
         healthBar = GetComponent<HealthBar>();
+        spR = GetComponent<SpriteRenderer>();
     }
 
     public void Infect(Experience source, float duration = -1)
@@ -36,6 +37,7 @@ public class HumanHealth : MonoBehaviour, IInfectable, ICurable
         {
             case InfectionStatus.Healthy:
                 StartIncubation(incubationDuration, infectionDuration);
+                spR.color = Color.green;
                 break;
 
             case InfectionStatus.Curing:
@@ -110,6 +112,7 @@ public class HumanHealth : MonoBehaviour, IInfectable, ICurable
                 StartCoroutine(Curing(curingDuration));
                 break;
         }
+        spR.color = Color.white;
     }
 
     private IEnumerator Curing(float duration)
