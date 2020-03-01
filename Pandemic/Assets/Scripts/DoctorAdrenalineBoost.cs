@@ -2,20 +2,24 @@
 using System.Collections;
 using UnityEngine;
 
+[RequireComponent(typeof(Animator))]
 public class DoctorAdrenalineBoost : UnlockableCooldownAbility
 {
     [SerializeField] private DoctorController dc;
     [SerializeField] private DoctorSFX doctorSfx;
+
+    private Animator anim;
 
     [SerializeField] private float speedAmp, duration;
     private float normalSpeed;
 
     private void Awake()
     {
+        anim = GetComponent<Animator>();
         normalSpeed = dc.Speed;
     }
 
-    public void AdrenalinBoost()
+    public void AdrenalineBoost()
     {
         if (IsReady && Math.Abs(dc.Speed - normalSpeed) < 0.01f)
         {
@@ -23,6 +27,7 @@ public class DoctorAdrenalineBoost : UnlockableCooldownAbility
             doctorSfx.PlaySFX(doctorSfx.DoctorAdrenalinBoost);
             StartCoroutine(BoostDuration(duration));
             ResetCooldown();
+            anim.Play("Inject");
         }
     }
 

@@ -113,19 +113,16 @@ public class DoctorController : MonoBehaviour
     private void OnAttack()
     {
         curing.TryCure();
-        anim.Play("Cure");
     }
 
     private void OnAbilityOne()
     {
         trapPlacer.TryPlaceTrap();
-        anim.Play("Cure");
     }
 
     private void OnAbilityTwo()
     {
-        dab.AdrenalinBoost();
-        anim.Play("Inject");
+        dab.AdrenalineBoost();
     }
 
     private void OnAbilityThree()
