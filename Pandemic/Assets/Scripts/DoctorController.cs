@@ -53,25 +53,25 @@ public class DoctorController : MonoBehaviour
 
         if (playerVelocity.y > movementVector2.y)
         {
-            Debug.Log("up");
+            //Debug.Log("up");
             anim.Play("Run");
         }
 
         if (playerVelocity.y < movementVector2.y)
         {
-            Debug.Log("down");
+            //Debug.Log("down");
             anim.Play("Run");
         }
 
         if (playerVelocity.x < movementVector2.x)
         {
-            Debug.Log("left");
+            //Debug.Log("left");
             anim.Play("Run");
         }
 
         if (playerVelocity.x > movementVector2.x)
         {
-            Debug.Log("right");
+            //Debug.Log("right");
             anim.Play("Run");
         }
     }

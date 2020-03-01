@@ -3,23 +3,32 @@ using System.Collections.Generic;
 using System.Dynamic;
 using UnityEngine;
 
-public class DoctorNewsBroadcast : MonoBehaviour
+public class DoctorNewsBroadcast : SupplyDropAbility
 {
     [SerializeField] private GameObject cameraGameObject;
-    public void CreateNewBroadcast()
+
+    [SerializeField] private float duration = 5;
+
+    [SerializeField] private uint usesLeft = 1;
+
+    public override void TryActivate()
     {
-        cameraGameObject.SetActive(true);
-        StartCoroutine(Duration(5));
-        //cameraGameObject = (GameObject)
-        //Instantiate(cameraGameObject);
-        //Destroy(cameraGameObject, 5f);
+        if (usesLeft > 0)
+        {
+            Activate();
+            usesLeft--;
+        }
     }
 
+    public override void Activate()
+    {
+        cameraGameObject.SetActive(true);
+        StartCoroutine(Duration(duration));
+    }
 
-    IEnumerator Duration(float seconds)
+    private IEnumerator Duration(float seconds)
     {
         yield return new WaitForSeconds(seconds);
         cameraGameObject.SetActive(false);
     }
-
 }

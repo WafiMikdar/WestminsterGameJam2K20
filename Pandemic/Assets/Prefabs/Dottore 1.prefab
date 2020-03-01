@@ -145,7 +145,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 5
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -338,7 +338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelRequirements:
   - 10
-  - 20
+  - 15
   experienceBar: {fileID: 0}
 --- !u!114 &1894400261602109154
 MonoBehaviour:
@@ -352,6 +352,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32aabdbbb3208c94fb49ec68e91f7180, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  notifier: {fileID: 0}
+  adrenalineUnlockNotification: "Adrenaline boost unlocked, press \xC5 for a temporary
+    speed-up"
+  sensorUnlockNotification: "Motion sensors unlocked, press \xD8 to place a motion
+    sensor"
 --- !u!114 &1894400261602109155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -504,15 +509,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 7509740743495549447}
-  DoctorAdrenalinBoost: []
-  DoctorHelicopterBroadcaster: []
-  DoctorInject: []
-  DoctorMotionSensorSetup: []
-  DoctorPlaceObject: []
-  DoctorPlaneCaptainTalkWithRadioEnd: []
-  DoctorPlaneSound: []
-  DoctorRunning: []
-  DoctorTrapSetUp: []
+  DoctorAdrenalinBoost:
+  - {fileID: 8300000, guid: 67b2bd0f935892c4c972311099259816, type: 3}
+  DoctorHelicopterBroadcaster:
+  - {fileID: 8300000, guid: a338a45224c070647933f8a6057232e6, type: 3}
+  DoctorInject:
+  - {fileID: 8300000, guid: 4e73841aa902bbb45a76a5e99dc96e8f, type: 3}
+  DoctorMotionSensorSetup:
+  - {fileID: 8300000, guid: de8b83b454fea5945aed442f9bcfe820, type: 3}
+  DoctorPlaceObject:
+  - {fileID: 8300000, guid: 35167fc4fbd33bf4c80623897cb54c7e, type: 3}
+  DoctorPlaneCaptainTalkWithRadioEnd:
+  - {fileID: 8300000, guid: 405d4148a04dfe942a835e372f215b52, type: 3}
+  DoctorPlaneSound:
+  - {fileID: 8300000, guid: c59eab1b9a8b6cc4d84f43cbd4bb8e69, type: 3}
+  DoctorRunning:
+  - {fileID: 8300000, guid: 0ebeef36fe0284d49a4edfa6f73c1b5b, type: 3}
+  DoctorTrapSetUp:
+  - {fileID: 8300000, guid: fdcd7fe15a0c33d4f954c45d397ea1c3, type: 3}
 --- !u!114 &231280663160439984
 MonoBehaviour:
   m_ObjectHideFlags: 0
