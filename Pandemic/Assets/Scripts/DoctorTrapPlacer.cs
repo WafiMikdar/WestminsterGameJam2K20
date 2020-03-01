@@ -2,15 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(RadialBarIndicator))]
+[RequireComponent(typeof(RadialBarIndicator), typeof(Animator))]
 public class DoctorTrapPlacer : UnlockableCooldownAbility
 {
     [SerializeField] private DoctorSFX doctorSfx;
 
     [SerializeField] private GameObject trap;
 
+    private Animator anim;
+
     private void Awake()
     {
+        anim = GetComponent<Animator>();
         Unlock();
     }
 
@@ -21,6 +24,7 @@ public class DoctorTrapPlacer : UnlockableCooldownAbility
             doctorSfx.PlaySFX(doctorSfx.DoctorTrapSetUp);
             PlaceTrap();
             ResetCooldown();
+            anim.Play("Cure");
         }
     }
 

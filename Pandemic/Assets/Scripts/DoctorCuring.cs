@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Experience))]
+[RequireComponent(typeof(Experience), typeof(Animator))]
 public class DoctorCuring : UnlockableCooldownAbility
 {
     [SerializeField] private float cureRadius;
@@ -10,11 +10,13 @@ public class DoctorCuring : UnlockableCooldownAbility
 
     [SerializeField] private ParticleSystem particles;
 
+    private Animator anim;
     private Experience experience;
 
     private void Awake()
     {
         experience = GetComponent<Experience>();
+        anim = GetComponent<Animator>();
         Unlock();
     }
 
@@ -25,6 +27,7 @@ public class DoctorCuring : UnlockableCooldownAbility
             doctorSfx.PlaySFX(doctorSfx.DoctorInject);
             Cure();
             ResetCooldown();
+            anim.Play("Cure");
         }
     }
 
