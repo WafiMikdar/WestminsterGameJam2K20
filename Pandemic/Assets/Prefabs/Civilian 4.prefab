@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 356046868267420872}
   - component: {fileID: 6388701561740337737}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SpriteMask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5008099819470311306}
   - component: {fileID: 1658640833757292253}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SpriteMask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4741400347735881564}
   - component: {fileID: 4741400347735881565}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CureBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -252,7 +252,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4741400347975167970}
   - component: {fileID: 4741400347975167971}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: IncubationBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 6520956450986634642}
   - component: {fileID: 2183466620374807517}
   - component: {fileID: 7522601734784231290}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Civilian 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -678,6 +678,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeathParticlesSkull
       objectReference: {fileID: 0}
+    - target: {fileID: 1440845441442911863, guid: 7c1107fed48d16541a4e29e93881fdfd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3875417634963167099, guid: 7c1107fed48d16541a4e29e93881fdfd,
         type: 3}
       propertyPath: looping
@@ -752,6 +757,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8787891629755471813, guid: 7c1107fed48d16541a4e29e93881fdfd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c1107fed48d16541a4e29e93881fdfd, type: 3}

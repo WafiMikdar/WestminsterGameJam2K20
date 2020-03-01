@@ -22,7 +22,7 @@ public class SupplyDropAbilitySlotter : MonoBehaviour
         switch (newAbility)
         {
             case MonsterWallPlacer ability:
-                notifier.CreateNotification("Got web wall, press X to place a wall between nearest buildings");
+                notifier.CreateNotification("Got web wall, press G to place a wall between nearest buildings");
                 break;
 
             case DoctorAirStrike ability:
@@ -30,7 +30,7 @@ public class SupplyDropAbilitySlotter : MonoBehaviour
                 break;
 
             case MonsterEcholocation ability:
-                notifier.CreateNotification("Got echolocation, press X to see which direction the doctor is");
+                notifier.CreateNotification("Got echolocation, press G to see which direction the doctor is");
                 break;
 
             case DoctorNewsBroadcast ability:
