@@ -2133,6 +2133,7 @@ GameObject:
   - component: {fileID: 1410318007}
   - component: {fileID: 1410318008}
   - component: {fileID: 1410318006}
+  - component: {fileID: 1410318009}
   m_Layer: 0
   m_Name: Dottore
   m_TagString: Untagged
@@ -2152,6 +2153,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d555ebacb37b274184f2b8a097672c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cooldown: 0
+  padlock: {fileID: 0}
+  litImage: {fileID: 0}
   cureRadius: 10
   doctorSfx: {fileID: 0}
   particles: {fileID: 1402271999}
@@ -2203,11 +2207,10 @@ MonoBehaviour:
   curing: {fileID: 1410317996}
   trapPlacer: {fileID: 1410318001}
   sensorPlacer: {fileID: 1410318005}
-  _doctorAdrenalineBoost: {fileID: 0}
+  dab: {fileID: 0}
   doctorNewsBroadcast: {fileID: 0}
   supplyDropAbility: {fileID: 1410318006}
   doctorSfx: {fileID: 0}
-  dab: {fileID: 0}
   anim: {fileID: 0}
   vel: 0
   animSwitch: 0
@@ -2449,6 +2452,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1410318009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410317995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80decf721f62e71419387136f7439a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indicator: {fileID: 0}
+  horizontalParticles: {fileID: 0}
+  verticalParticles: {fileID: 0}
+  size: {x: 0, y: 0}
+  tileSize: {x: 0, y: 0}
+  warningDuration: 0
+  minIndicatorAlpha: 0
+  maxIndicatorAlpha: 0
+  frequencyModifierFactor: 0
+  frequencyModifierExponent: 0
 --- !u!1 &1427550401
 GameObject:
   m_ObjectHideFlags: 0
@@ -3330,6 +3355,7 @@ MonoBehaviour:
   level1: 1
   level2: 0
   level3: 0
+  monsterSfx: {fileID: 0}
 --- !u!114 &1796844209
 MonoBehaviour:
   m_ObjectHideFlags: 0
