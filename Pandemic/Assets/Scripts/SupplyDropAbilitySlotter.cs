@@ -26,7 +26,7 @@ public class SupplyDropAbilitySlotter : MonoBehaviour
                 break;
 
             case DoctorAirStrike ability:
-                notifier.CreateNotification("Got air strike, press ; to air drop curing rain");
+                notifier.CreateNotification("Got air strike, press O to air drop curing rain");
                 break;
 
             case MonsterEcholocation ability:
@@ -34,7 +34,7 @@ public class SupplyDropAbilitySlotter : MonoBehaviour
                 break;
 
             case DoctorNewsBroadcast ability:
-                notifier.CreateNotification("Got news broadcast, press ; to see a preview of where the monster is");
+                notifier.CreateNotification("Got news broadcast, press O to see a preview of where the monster is");
                 break;
         }
     }
