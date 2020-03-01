@@ -231,8 +231,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   music:
   - {fileID: 8300000, guid: 388cef1f770113e4f9628a0e10a66917, type: 3}
-  - {fileID: 0}
-  crossfadeTime: 0
+  - {fileID: 8300000, guid: c17a934732dd7354d9b54e5a57fed9ce, type: 3}
+  crossfadeTime: 3
 --- !u!82 &64617203
 AudioSource:
   m_ObjectHideFlags: 0
@@ -243,7 +243,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 388cef1f770113e4f9628a0e10a66917, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
