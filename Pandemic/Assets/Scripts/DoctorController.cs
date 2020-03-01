@@ -15,7 +15,6 @@ public class DoctorController : MonoBehaviour
     [SerializeField] private DoctorNewsBroadcast doctorNewsBroadcast;
     [SerializeField] private SupplyDropAbilitySlot supplyDropAbility;
     [SerializeField] private DoctorSFX doctorSfx;
-    [SerializeField] private DoctorAdrenalineBoost dab;
 
     public float Speed
     {
@@ -34,10 +33,17 @@ public class DoctorController : MonoBehaviour
         spR = GetComponent<SpriteRenderer>();
     }
 
+    public void StopMovement(int active)
+    {
+        if (active == 1)
+            transform.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+        if (active == 0)
+            transform.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+    }
+
     private void Move()
     {
         Vector2 movementVector2 = new Vector2(playerVelocity.x, playerVelocity.y) * speed * Time.deltaTime;
-
         transform.Translate(movementVector2);
 
         if (playerVelocity.y > movementVector2.y)
@@ -124,12 +130,12 @@ public class DoctorController : MonoBehaviour
 
     private void OnAbilityThree()
     {
-        sensorPlacer.TryActivate();
+        doctorAdrenalinBoost.AdrenalinBoost();
     }
 
     private void OnAbilityFour()
     {
-        supplyDropAbility.TryActivate();
+        sensorPlacer.TryActivate();
     }
 
     public void canMove()

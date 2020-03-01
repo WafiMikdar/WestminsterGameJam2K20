@@ -6,9 +6,13 @@ using UnityEngine;
 public class MonsterProgression : MonoBehaviour
 {
     public Animator anim;
+
+    // Why, oh god why would you ever make these?!
     public bool level1 = true;
     public bool level2 = false;
     public bool level3 = false;
+
+    [SerializeField] private MonsterSfx monsterSfx;
     private void Awake()
     {
         GetComponent<Experience>().onLevelUp += LevelUp;
@@ -16,6 +20,7 @@ public class MonsterProgression : MonoBehaviour
 
     private void LevelUp(uint newLevel)
     {
+        monsterSfx.PlaySFX(monsterSfx.MonsterEvolution);
         switch (newLevel)
         {
             case 1:
