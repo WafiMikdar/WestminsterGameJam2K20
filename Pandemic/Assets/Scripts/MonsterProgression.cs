@@ -43,6 +43,10 @@ public class MonsterProgression : MonoBehaviour
                 anim.SetBool("level3", true);
                 anim.SetBool("level2", false);
                 break;
+
+            case 3:
+                WinScreen.Instance.DisplayMonsterWin();
+                break;
         }
     }
 }

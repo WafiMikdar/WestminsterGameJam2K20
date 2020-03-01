@@ -11,6 +11,7 @@ public class MonsterHealth : MonoBehaviour, ICurable
 
     private void Die()
     {
+        WinScreen.Instance.DisplayDoctorWin();
         Destroy(gameObject);
     }
 }
