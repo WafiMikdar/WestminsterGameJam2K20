@@ -12,7 +12,7 @@ public class MonsterController : MonoBehaviour
     [SerializeField] private MonsterNoClip noClip;
     [SerializeField] private MonsterLethalInfecting lethalInfecting;
     [SerializeField] private MonsterUltravision ultravision;
-    [SerializeField] private SupplyDropAbilitySlot supplyDropAbility;
+    [SerializeField] private SupplyDropAbilitySlotter supplyDropAbility;
 
     public float Speed { get => speed; set => speed = value; }
 

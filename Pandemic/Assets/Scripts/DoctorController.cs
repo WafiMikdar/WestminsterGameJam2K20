@@ -13,7 +13,7 @@ public class DoctorController : MonoBehaviour
     [SerializeField] private MotionSensorPlacer sensorPlacer;
     [SerializeField] private DoctorAdrenalineBoost dab;
     [SerializeField] private DoctorNewsBroadcast doctorNewsBroadcast;
-    [SerializeField] private SupplyDropAbilitySlot supplyDropAbility;
+    [SerializeField] private SupplyDropAbilitySlotter supplyDropAbility;
     [SerializeField] private DoctorSFX doctorSfx;
 
     private float lastDisableMovementTime;

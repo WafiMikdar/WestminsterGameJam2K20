@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TimedSupplyDropAbilitySlot : SupplyDropAbilitySlot
+public class TimedSupplyDropAbilitySlotter : SupplyDropAbilitySlotter
 {
     [SerializeField] private float supplyDropWaitTime;
     private float supplyDropPickUpReadyTime;

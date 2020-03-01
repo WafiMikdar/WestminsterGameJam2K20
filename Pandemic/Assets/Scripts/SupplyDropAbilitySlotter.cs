@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SupplyDropAbilitySlot : MonoBehaviour
+public class SupplyDropAbilitySlotter : MonoBehaviour
 {
     [SerializeField] private bool isDoctor;
 
