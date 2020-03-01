@@ -482,7 +482,7 @@ MonoBehaviour:
   slowDownFactor: 0.83
   stoppingSpeed: 0.08
   humanSFX: {fileID: 8374432641234010080}
-  anim: {fileID: 0}
+  anim: {fileID: 4777028109695188799}
   vel: 0
 --- !u!61 &7056606520029061541
 BoxCollider2D:
