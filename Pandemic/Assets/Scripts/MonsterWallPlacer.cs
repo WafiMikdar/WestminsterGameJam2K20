@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class MonsterWallPlacer : SupplyDropAbility
 {
-    [SerializeField] private float cooldown;
+    [SerializeField] private uint usesLeft;
+
     [SerializeField] private MonsterSfx monsterSfx;
     private float readyTime;
 
@@ -14,11 +15,11 @@ public class MonsterWallPlacer : SupplyDropAbility
 
     public override void TryActivate()
     {
-        if (Time.time >= readyTime)
+        if (usesLeft > 0)
         {
-            readyTime = Time.time + cooldown;
             monsterSfx.PlaySFX(monsterSfx.MonsterSpiderWebSound);
             Activate();
+            usesLeft--;
         }
     }
 

@@ -17,6 +17,8 @@ public class DoctorAirStrike : SupplyDropAbility
 
     [SerializeField] private float warningDuration, dangerDuration, minIndicatorAlpha, maxIndicatorAlpha, baseFrequencyModifier, frequencyModifierFactor, frequencyModifierExponent;
 
+    [SerializeField] private uint usesLeft = 1;
+
     private Experience experience;
 
     private void Awake()
@@ -27,7 +29,11 @@ public class DoctorAirStrike : SupplyDropAbility
 
     public override void TryActivate()
     {
-        Activate();
+        if (usesLeft > 0)
+        {
+            Activate();
+            usesLeft--;
+        }
     }
 
     public override void Activate()

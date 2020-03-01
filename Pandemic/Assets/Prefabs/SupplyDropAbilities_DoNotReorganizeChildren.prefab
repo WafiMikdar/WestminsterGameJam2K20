@@ -58,6 +58,58 @@ MonoBehaviour:
   baseFrequencyModifier: 3
   frequencyModifierFactor: 0.1
   frequencyModifierExponent: 5.5
+--- !u!1 &1089340236
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1089340237}
+  - component: {fileID: 1089340238}
+  m_Layer: 0
+  m_Name: SpiderWebWall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1089340237
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089340236}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3767034174643874456}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1089340238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089340236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 970b562a56f5608459fbf46fa399880a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 0
+  monsterSfx: {fileID: 0}
+  buildingLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  horizontalWallPrefab: {fileID: 6644663289988294405, guid: 746bb9acca6ea3c458817310ca664e1d,
+    type: 3}
+  verticalWallPrefab: {fileID: 6644663289988294405, guid: 746bb9acca6ea3c458817310ca664e1d,
+    type: 3}
 --- !u!1 &3767034174643874457
 GameObject:
   m_ObjectHideFlags: 0
@@ -86,6 +138,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3767034175682669305}
+  - {fileID: 1089340237}
   m_Father: {fileID: 3767034176435103996}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
