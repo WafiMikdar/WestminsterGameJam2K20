@@ -9,6 +9,8 @@ public class DoctorAirStrike : SupplyDropAbility
 {
     [SerializeField] private GameObject indicator;
 
+    [Serializable] private DoctorSFX doctorSfx;
+
     [SerializeField] private Sprite dangerSprite;
 
     [SerializeField] private ParticleSystem horizontalParticles, verticalParticles;
@@ -50,7 +52,7 @@ public class DoctorAirStrike : SupplyDropAbility
     private IEnumerator FlashingWarningZone(SpriteRenderer horizontalRend, SpriteRenderer verticalRend)
     {
         float startTime = Time.time, endTime = startTime + warningDuration;
-
+        doctorSfx.PlaySFX(doctorSfx.DoctorPlaneSound);
         while (endTime > Time.time)
         {
             float alpha = GetIndicatorAlpha(startTime);
@@ -58,7 +60,7 @@ public class DoctorAirStrike : SupplyDropAbility
             verticalRend.color = new Color(verticalRend.color.r, verticalRend.color.g, verticalRend.color.b, alpha);
             yield return null;
         }
-
+        
         StartCoroutine(WarningZone(horizontalRend, verticalRend));
     }
 
@@ -88,7 +90,7 @@ public class DoctorAirStrike : SupplyDropAbility
     {
         Collider2D[] colls = Physics2D.OverlapBoxAll(verticalRend.transform.position, verticalRend.size, 0).Union(
             Physics2D.OverlapBoxAll(horizontalRend.transform.position, horizontalRend.size, 0)).ToArray();
-
+        doctorSfx.PlaySFX(doctorSfx.DoctorPlaneCaptainTalkWithRadioEnd);
         foreach (Collider2D coll in colls)
         {
             coll.GetComponent<ICurable>()?.Cure(experience);
