@@ -549,25 +549,9 @@
             "id": "cc44a678-d946-43fd-82f8-27a86366fd29",
             "actions": [
                 {
-                    "name": "AbilityTwo",
+                    "name": "PauseMenu",
                     "type": "Button",
-                    "id": "9ea83658-949b-4d44-8d6c-03c008e0f7d1",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "Press"
-                },
-                {
-                    "name": "AbilityOne",
-                    "type": "Button",
-                    "id": "435a04b1-fcd2-426a-9396-48f79f5b4023",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "Press"
-                },
-                {
-                    "name": "Attack",
-                    "type": "Button",
-                    "id": "be1c2929-f083-4f34-a219-800fc0d6565c",
+                    "id": "4ceffb38-f49c-4417-9317-4ce076ca76f6",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "Press"
@@ -575,13 +559,29 @@
                 {
                     "name": "Move",
                     "type": "Value",
-                    "id": "4ceffb38-f49c-4417-9317-4ce076ca76f6",
+                    "id": "9ea83658-949b-4d44-8d6c-03c008e0f7d1",
                     "expectedControlType": "Stick",
                     "processors": "",
                     "interactions": ""
                 },
                 {
-                    "name": "AbilityFive",
+                    "name": "Attack",
+                    "type": "Button",
+                    "id": "435a04b1-fcd2-426a-9396-48f79f5b4023",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press"
+                },
+                {
+                    "name": "AbilityOne",
+                    "type": "Button",
+                    "id": "be1c2929-f083-4f34-a219-800fc0d6565c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press"
+                },
+                {
+                    "name": "AbilityTwo",
                     "type": "Button",
                     "id": "b93a6e81-8218-4e62-a92a-11eb89247a85",
                     "expectedControlType": "",
@@ -589,7 +589,7 @@
                     "interactions": "Press"
                 },
                 {
-                    "name": "AbilityFour",
+                    "name": "AbilityThree",
                     "type": "Button",
                     "id": "34f6c279-91f5-4d60-a1dd-e44f2905440d",
                     "expectedControlType": "",
@@ -597,7 +597,7 @@
                     "interactions": "Press"
                 },
                 {
-                    "name": "AbilityThree",
+                    "name": "AbilityFour",
                     "type": "Button",
                     "id": "4ef5b999-3744-43cf-95ae-5ca5126e43da",
                     "expectedControlType": "",
@@ -605,7 +605,7 @@
                     "interactions": "Press"
                 },
                 {
-                    "name": "PauseMenu",
+                    "name": "AbilityFive",
                     "type": "Button",
                     "id": "c1d8a57f-0a28-45fa-8960-786b41e4ebc5",
                     "expectedControlType": "",
@@ -614,6 +614,28 @@
                 }
             ],
             "bindings": [
+                {
+                    "name": "",
+                    "id": "ec287d3f-79fd-40be-adf2-a602e0825852",
+                    "path": "<Keyboard>/k",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "arrowKeyboard",
+                    "action": "AbilityTwo",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d306a9fc-3031-463d-bb24-d99038e34f44",
+                    "path": "<Keyboard>/numpad6",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "arrowKeyboard",
+                    "action": "AbilityFive",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
                 {
                     "name": "ArrowKeys",
                     "id": "3e2444fb-2946-4534-9b62-94d40230f4d2",
@@ -671,8 +693,19 @@
                 },
                 {
                     "name": "",
+                    "id": "dd20a329-ae65-4cbc-8a14-137e6fc3e150",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "arrowKeyboard;wasdKeyboard",
+                    "action": "PauseMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "c22aa1ea-c974-4cd2-818a-85bd4f8c7731",
-                    "path": "<Keyboard>/numpad1",
+                    "path": "<Keyboard>/i",
                     "interactions": "Press",
                     "processors": "",
                     "groups": "arrowKeyboard",
@@ -683,7 +716,7 @@
                 {
                     "name": "",
                     "id": "35c6e87b-3112-47f9-8af7-0b5109d5d8a9",
-                    "path": "<Keyboard>/numpad2",
+                    "path": "<Keyboard>/j",
                     "interactions": "Press",
                     "processors": "",
                     "groups": "arrowKeyboard",
@@ -693,19 +726,8 @@
                 },
                 {
                     "name": "",
-                    "id": "ec287d3f-79fd-40be-adf2-a602e0825852",
-                    "path": "<Keyboard>/numpad3",
-                    "interactions": "Press",
-                    "processors": "",
-                    "groups": "arrowKeyboard",
-                    "action": "AbilityTwo",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "23e79d8d-afe1-438d-a6b5-628ef137bc79",
-                    "path": "<Keyboard>/numpad4",
+                    "path": "<Keyboard>/l",
                     "interactions": "",
                     "processors": "",
                     "groups": "arrowKeyboard",
@@ -716,33 +738,11 @@
                 {
                     "name": "",
                     "id": "3182ac5d-eaa9-4558-89a9-d0e26a43240b",
-                    "path": "<Keyboard>/numpad5",
+                    "path": "<Keyboard>/semicolon",
                     "interactions": "Press",
                     "processors": "",
                     "groups": "arrowKeyboard",
                     "action": "AbilityFour",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "d306a9fc-3031-463d-bb24-d99038e34f44",
-                    "path": "<Keyboard>/numpad6",
-                    "interactions": "Press",
-                    "processors": "",
-                    "groups": "arrowKeyboard",
-                    "action": "AbilityFive",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "dd20a329-ae65-4cbc-8a14-137e6fc3e150",
-                    "path": "<Keyboard>/escape",
-                    "interactions": "Press",
-                    "processors": "",
-                    "groups": "arrowKeyboard;wasdKeyboard",
-                    "action": "PauseMenu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -753,7 +753,7 @@
             "id": "f061feea-f7f8-4c1d-a83b-350cbd4ec190",
             "actions": [
                 {
-                    "name": "AbilityTwo",
+                    "name": "PauseMenu",
                     "type": "Button",
                     "id": "abacbcec-95a1-4487-be78-791732e15366",
                     "expectedControlType": "",
@@ -761,12 +761,12 @@
                     "interactions": "Press"
                 },
                 {
-                    "name": "AbilityOne",
-                    "type": "Button",
+                    "name": "Move",
+                    "type": "Value",
                     "id": "2b15c0ec-66b2-4f22-88df-ded3ca3f4f13",
-                    "expectedControlType": "",
+                    "expectedControlType": "Stick",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": ""
                 },
                 {
                     "name": "Attack",
@@ -777,15 +777,15 @@
                     "interactions": "Press"
                 },
                 {
-                    "name": "Move",
-                    "type": "Value",
+                    "name": "AbilityOne",
+                    "type": "Button",
                     "id": "607c8070-11a5-40d4-af1a-6257f006f5fe",
-                    "expectedControlType": "Stick",
+                    "expectedControlType": "",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press"
                 },
                 {
-                    "name": "AbilityFive",
+                    "name": "AbilityTwo",
                     "type": "Button",
                     "id": "d371b8ca-4c5b-4f4d-8a66-e67fe8715e5b",
                     "expectedControlType": "",
@@ -793,7 +793,7 @@
                     "interactions": "Press"
                 },
                 {
-                    "name": "AbilityFour",
+                    "name": "AbilityThree",
                     "type": "Button",
                     "id": "36a04e52-0563-4257-a68b-5caffa3e57cb",
                     "expectedControlType": "",
@@ -801,7 +801,7 @@
                     "interactions": "Press"
                 },
                 {
-                    "name": "AbilityThree",
+                    "name": "AbilityFour",
                     "type": "Button",
                     "id": "463af400-e0ef-4655-98bc-81e8cb70e108",
                     "expectedControlType": "",
@@ -809,7 +809,7 @@
                     "interactions": "Press"
                 },
                 {
-                    "name": "PauseMenu",
+                    "name": "AbilityFive",
                     "type": "Button",
                     "id": "cb3e5937-64d7-4673-b13a-f3a871c166f7",
                     "expectedControlType": "",
@@ -818,6 +818,39 @@
                 }
             ],
             "bindings": [
+                {
+                    "name": "",
+                    "id": "94f6952c-411b-4448-a939-20cb61c2d7c8",
+                    "path": "<Keyboard>/v",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "wasdKeyboard",
+                    "action": "AbilityTwo",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4bd093b7-7458-4955-a2f7-69c957e6cc44",
+                    "path": "<Keyboard>/5",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "wasdKeyboard",
+                    "action": "AbilityFive",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "08ae301d-cdee-45dd-9bf5-d38ecba86b67",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "wasdKeyboard;arrowKeyboard",
+                    "action": "PauseMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
                 {
                     "name": "wasdKeys",
                     "id": "ad2b1dfb-d9a7-4464-8e63-b6c83f7bfec6",
@@ -875,6 +908,17 @@
                 },
                 {
                     "name": "",
+                    "id": "57cf3f58-3c88-4912-998b-26fa427fdcbf",
+                    "path": "<Keyboard>/c",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "wasdKeyboard",
+                    "action": "AbilityOne",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "98600d6b-ee55-4e79-8d19-2d610c09dd57",
                     "path": "<Keyboard>/f",
                     "interactions": "Press",
@@ -886,30 +930,8 @@
                 },
                 {
                     "name": "",
-                    "id": "57cf3f58-3c88-4912-998b-26fa427fdcbf",
-                    "path": "<Keyboard>/q",
-                    "interactions": "Press",
-                    "processors": "",
-                    "groups": "wasdKeyboard",
-                    "action": "AbilityOne",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "94f6952c-411b-4448-a939-20cb61c2d7c8",
-                    "path": "<Keyboard>/e",
-                    "interactions": "Press",
-                    "processors": "",
-                    "groups": "wasdKeyboard",
-                    "action": "AbilityTwo",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "51ab0731-c8c5-4815-9ed0-6a1014d609d5",
-                    "path": "<Keyboard>/r",
+                    "path": "<Keyboard>/b",
                     "interactions": "Press",
                     "processors": "",
                     "groups": "wasdKeyboard",
@@ -920,33 +942,11 @@
                 {
                     "name": "",
                     "id": "be5809da-b00a-4414-bd57-9718c1cfbfab",
-                    "path": "<Keyboard>/c",
-                    "interactions": "Press",
-                    "processors": "",
-                    "groups": "wasdKeyboard",
-                    "action": "AbilityFour",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "4bd093b7-7458-4955-a2f7-69c957e6cc44",
                     "path": "<Keyboard>/x",
                     "interactions": "Press",
                     "processors": "",
                     "groups": "wasdKeyboard",
-                    "action": "AbilityFive",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "08ae301d-cdee-45dd-9bf5-d38ecba86b67",
-                    "path": "<Keyboard>/escape",
-                    "interactions": "Press",
-                    "processors": "",
-                    "groups": "wasdKeyboard;arrowKeyboard",
-                    "action": "PauseMenu",
+                    "action": "AbilityFour",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
