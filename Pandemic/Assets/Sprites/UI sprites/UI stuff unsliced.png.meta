@@ -389,10 +389,10 @@ TextureImporter:
       name: UI stuff unsliced_4
       rect:
         serializedVersion: 2
-        x: 1134
-        y: 646
-        width: 107
-        height: 143
+        x: 1135
+        y: 664
+        width: 102
+        height: 122
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -410,10 +410,10 @@ TextureImporter:
       name: UI stuff unsliced_5
       rect:
         serializedVersion: 2
-        x: 1291
-        y: 662
-        width: 108
-        height: 127
+        x: 1293
+        y: 664
+        width: 102
+        height: 123
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -432,9 +432,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1434
-        y: 662
-        width: 106
-        height: 127
+        y: 664
+        width: 102
+        height: 122
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -452,10 +452,10 @@ TextureImporter:
       name: UI stuff unsliced_8
       rect:
         serializedVersion: 2
-        x: 1581
-        y: 661
-        width: 107
-        height: 126
+        x: 1583
+        y: 663
+        width: 103
+        height: 121
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -473,10 +473,10 @@ TextureImporter:
       name: UI stuff unsliced_12
       rect:
         serializedVersion: 2
-        x: 1132
-        y: 503
-        width: 109
-        height: 127
+        x: 1135
+        y: 505
+        width: 102
+        height: 122
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -494,10 +494,10 @@ TextureImporter:
       name: UI stuff unsliced_14
       rect:
         serializedVersion: 2
-        x: 1272
-        y: 503
-        width: 124
-        height: 127
+        x: 1292
+        y: 505
+        width: 103
+        height: 122
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -516,9 +516,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1437
-        y: 505
-        width: 105
-        height: 126
+        y: 506
+        width: 103
+        height: 122
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -536,10 +536,10 @@ TextureImporter:
       name: UI stuff unsliced_16
       rect:
         serializedVersion: 2
-        x: 1582
-        y: 503
-        width: 106
-        height: 125
+        x: 1583
+        y: 505
+        width: 103
+        height: 121
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MonsterWallPlacer : MonoBehaviour
+public class MonsterWallPlacer : SupplyDropAbility
 {
     [SerializeField] private float cooldown;
     [SerializeField] private MonsterSfx monsterSfx;
@@ -12,17 +12,17 @@ public class MonsterWallPlacer : MonoBehaviour
 
     [SerializeField] private GameObject horizontalWallPrefab, verticalWallPrefab;
 
-    public void TryPlaceWall()
+    public override void TryActivate()
     {
         if (Time.time >= readyTime)
         {
             readyTime = Time.time + cooldown;
             monsterSfx.PlaySFX(monsterSfx.MonsterSpiderWebSound);
-            PlaceWall();
+            Activate();
         }
     }
 
-    private void PlaceWall()
+    public override void Activate()
     {
         (Vector2 b1, Vector2 b2, bool isHorizontal) = GetWallInfo();
 

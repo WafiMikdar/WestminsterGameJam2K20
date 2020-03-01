@@ -46,7 +46,7 @@ public class MonsterController : MonoBehaviour
     private void OnMove(InputValue value)
     {
         monsterVelocity = value.Get<Vector2>();
-        Debug.Log($"MonsterVelocity: {monsterVelocity}");
+        //Debug.Log($"MonsterVelocity: {monsterVelocity}");
     }
 
     private void OnAttack()

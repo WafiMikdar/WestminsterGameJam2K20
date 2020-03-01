@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Instructions.unity
     guid: 4f712133761dc514ca6812b7c1e4c549
+  - enabled: 1
+    path: Assets/Scenes/DoctorWin.unity
+    guid: 85346d4804ae77540b7a8127961be7e7
+  - enabled: 1
+    path: Assets/Scenes/MonsterWin.unity
+    guid: fbdb58e1ea73a004caf36be30b465cb0
   m_configObjects: {}
