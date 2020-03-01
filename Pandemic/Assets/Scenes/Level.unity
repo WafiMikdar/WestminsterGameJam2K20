@@ -19269,6 +19269,11 @@ PrefabInstance:
       propertyPath: experienceBar
       value: 
       objectReference: {fileID: 1547769404}
+    - target: {fileID: 6314589998120943583, guid: 39f76ea0192aaf040affc1bc8e5d9308,
+        type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7047064714739308188, guid: 39f76ea0192aaf040affc1bc8e5d9308,
         type: 3}
       propertyPath: padlock

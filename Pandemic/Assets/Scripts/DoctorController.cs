@@ -33,38 +33,10 @@ public class DoctorController : MonoBehaviour
         spR = GetComponent<SpriteRenderer>();
     }
 
-    public void StopMovement(int active)
-    {
-        if (active == 1)
-            transform.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
-        if (active == 0)
-            transform.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-    }
-
     private void Move()
     {
         Vector2 movementVector2 = new Vector2(playerVelocity.x, playerVelocity.y) * speed * Time.deltaTime;
         transform.Translate(movementVector2);
-
-        if (playerVelocity.y > movementVector2.y)
-        {
-            Debug.Log("up");
-        }
-
-        if (playerVelocity.y < movementVector2.y)
-        {
-            Debug.Log("down");
-        }
-
-        if (playerVelocity.x < movementVector2.x)
-        {
-            Debug.Log("left");
-        }
-
-        if (playerVelocity.x > movementVector2.x)
-        {
-            Debug.Log("right");
-        }
 
         if (playerVelocity.x < 0)
         {
