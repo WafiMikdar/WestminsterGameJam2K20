@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2953,7 +2953,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 4818469223293863140}
   smoothSpeed: 5
-  maxSpeed: 0
   offset: {x: 0, y: 0, z: -11}
 --- !u!114 &1434351053
 MonoBehaviour:
@@ -61166,7 +61165,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 159211421}
   smoothSpeed: 5
-  maxSpeed: 0
   offset: {x: 0, y: 0, z: -11}
 --- !u!114 &2052642898
 MonoBehaviour:
@@ -61208,15 +61206,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4818469223293863140}
+  - component: {fileID: 4818469223293863163}
+  - component: {fileID: 946542008}
   - component: {fileID: 4818469223293863141}
   - component: {fileID: 4818469223293863143}
   - component: {fileID: 4818469223293863161}
   - component: {fileID: 4818469223293863160}
   - component: {fileID: 4818469223293863164}
-  - component: {fileID: 4818469223293863163}
   - component: {fileID: 4818469223293863162}
   - component: {fileID: 4818469223293863165}
-  - component: {fileID: 946542008}
   - component: {fileID: 946542009}
   - component: {fileID: 4818469223293863144}
   - component: {fileID: 4818469223293863142}
@@ -61256,6 +61254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cureRadius: 1
+  doctorSfx: {fileID: 0}
   particles: {fileID: 1796259295}
 --- !u!114 &4818469223293863142
 MonoBehaviour:
@@ -61269,6 +61268,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2177b0b479898f44a8e14aab2583deba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dc: {fileID: 0}
+  speedAmp: 0
+  seconds: 0
+  doctorSfx: {fileID: 0}
 --- !u!114 &4818469223293863143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61301,11 +61304,13 @@ MonoBehaviour:
   curing: {fileID: 4818469223293863141}
   trapPlacer: {fileID: 4818469223293863160}
   sensorPlacer: {fileID: 4818469223293863164}
-  dab: {fileID: 4818469223293863142}
+  doctorAdrenalinBoost: {fileID: 0}
+  doctorNewsBroadcast: {fileID: 0}
+  supplyDropAbility: {fileID: 0}
+  doctorSfx: {fileID: 0}
   anim: {fileID: 946542008}
   vel: 0
   animSwitch: 0
-  supplyDropAbility: {fileID: 0}
 --- !u!114 &4818469223293863160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61319,6 +61324,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 5
+  doctorSfx: {fileID: 0}
   trap: {fileID: 8420153788966475291, guid: 9cc16cd31c8e13a4295ca573c552b02d, type: 3}
 --- !u!114 &4818469223293863161
 MonoBehaviour:
@@ -61429,6 +61435,7 @@ MonoBehaviour:
   sensorPrefab: {fileID: 8420153788966475291, guid: 930d26e3b13466e499ca95f7a194e6dd,
     type: 3}
   directionalIndicator: {fileID: 4818469223293863165}
+  doctorSfx: {fileID: 0}
   totalUses: 3
 --- !u!114 &4818469223293863165
 MonoBehaviour:
