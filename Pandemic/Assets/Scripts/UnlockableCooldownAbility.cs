@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,13 +9,16 @@ public abstract class UnlockableCooldownAbility : MonoBehaviour
 
     [SerializeField] private Image padlock, litImage;
 
-    public bool IsReady => Time.time >= readyTime;
+    private bool locked = true;
+
+    public bool IsReady => Time.time >= readyTime && !locked;
 
     public void Unlock()
     {
         padlock.gameObject.SetActive(false);
         litImage.fillAmount = 1;
         readyTime = Time.time;
+        locked = false;
     }
 
     public void ResetCooldown()
