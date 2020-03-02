@@ -53,6 +53,7 @@ public class DoctorController : MonoBehaviour
 
         anim.SetFloat("Vel", vel);
 
+        /*
         if (playerVelocity.y > movementVector2.y)
         {
             //Debug.Log("up");
@@ -76,6 +77,7 @@ public class DoctorController : MonoBehaviour
             //Debug.Log("right");
             anim.Play("Run");
         }
+        */
     }
 
     private void OnMove(InputValue value)
