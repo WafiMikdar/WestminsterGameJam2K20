@@ -738,7 +738,7 @@
                 {
                     "name": "",
                     "id": "3182ac5d-eaa9-4558-89a9-d0e26a43240b",
-                    "path": "<Keyboard>/semicolon",
+                    "path": "<Keyboard>/o",
                     "interactions": "Press",
                     "processors": "",
                     "groups": "arrowKeyboard",
@@ -942,7 +942,7 @@
                 {
                     "name": "",
                     "id": "be5809da-b00a-4414-bd57-9718c1cfbfab",
-                    "path": "<Keyboard>/x",
+                    "path": "<Keyboard>/g",
                     "interactions": "Press",
                     "processors": "",
                     "groups": "wasdKeyboard",
